@@ -146,8 +146,23 @@ class MorseWindow(Adw.ApplicationWindow):
         return output
 
     def translate_from(self, text):
+        words = text.replace('\n', '/').split('/')
         output = ''
         
+        for outer_index, word in enumerate(words):
+            word.strip()
+
+            letters = word.split(' ')
+            letters = list(filter(None, letters))
+
+            for inner_index, letter in enumerate(letters):
+                character = list(morse_table.keys())[list(morse_table.values()).index(letter)]
+
+                if character != None:
+                    output += character
+
+            output += ' '
+
         return output
 
     def clear_text(self, text_view):
