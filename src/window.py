@@ -87,7 +87,10 @@ class MorseWindow(Adw.ApplicationWindow):
         (start, end) = input_buffer.get_bounds()
         text = input_buffer.get_text(start, end, False)
 
-        output_message = self.translate_to(text)
+        if self.mode == Mode.TO_MORSE:
+            output_message = self.translate_to(text)
+        if self.mode == Mode.FROM_MORSE:
+            output_message = self.translate_from(text)
 
         output_buffer = self.output_text_view.get_buffer()
         output_buffer.set_text(output_message)
@@ -138,4 +141,9 @@ class MorseWindow(Adw.ApplicationWindow):
                 output += ' / '
 
         return output
+
+    def translate_from(self, text):
+        output = ''
         
+        return output
+
