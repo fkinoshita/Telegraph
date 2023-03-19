@@ -96,6 +96,9 @@ class MorseWindow(Adw.ApplicationWindow):
         output_buffer.set_text(output_message)
 
     def __on_flip_button_clicked(self, button):
+        self.clear_text(self.output_text_view)
+        self.clear_text(self.input_text_view)
+
         if self.mode == Mode.FROM_MORSE:
             self.mode = Mode.TO_MORSE
 
@@ -147,3 +150,7 @@ class MorseWindow(Adw.ApplicationWindow):
         
         return output
 
+    def clear_text(self, text_view):
+        output_buffer = text_view.get_buffer()
+        output_buffer.set_text('')
+    
