@@ -1,0 +1,6 @@
+data/com.github.fkinoshita.Morse.desktop.in
+data/com.github.fkinoshita.Morse.appdata.xml.in
+data/com.github.fkinoshita.Morse.gschema.xml
+src/main.py
+src/window.py
+src/window.ui

@@ -1,0 +1,5 @@
+.text-box textview,
+.text-box text {
+  background: none;
+  color: inherit;
+}
