@@ -5,5 +5,7 @@
 
     <file preprocess="xml-stripblanks">window.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+
+    <file preprocess="xml-stripblanks">icons/switch-symbolic.svg</file>
   </gresource>
 </gresources>
