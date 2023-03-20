@@ -119,8 +119,16 @@ class MorseWindow(Adw.ApplicationWindow):
     def __on_switch_button_clicked(self, button):
         self.input_text_view.grab_focus()
 
-        self.clear_text(self.output_text_view)
-        self.clear_text(self.input_text_view)
+        input_buffer = self.input_text_view.get_buffer()
+        (start, end) = input_buffer.get_bounds()
+        input_text = input_buffer.get_text(start, end, False)
+
+        output_buffer = self.output_text_view.get_buffer()
+        (start, end) = output_buffer.get_bounds()
+        output_text = output_buffer.get_text(start, end, False)
+
+        input_buffer.set_text(output_text.lower())
+        output_buffer.set_text(input_text.lower())
 
         if self.mode == Mode.FROM_MORSE:
             self.mode = Mode.TO_MORSE
@@ -197,10 +205,5 @@ class MorseWindow(Adw.ApplicationWindow):
             output += ' '
 
         return output
-
-
-    def clear_text(self, text_view):
-        output_buffer = text_view.get_buffer()
-        output_buffer.set_text('')
 
     
