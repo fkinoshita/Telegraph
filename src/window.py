@@ -17,6 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import re
 from enum import Enum
 
 from gi.repository import Adw
@@ -130,6 +131,8 @@ class MorseWindow(Adw.ApplicationWindow):
         Gdk.Display.get_default().get_clipboard().set(output)
 
     def translate_to(self, text):
+        text = re.sub(r'[^A-Za-z0-9 \n]+', '', text)
+
         words = text.lower().replace('\n', ' ').split(' ')
         output = ''
 
@@ -146,6 +149,8 @@ class MorseWindow(Adw.ApplicationWindow):
         return output
 
     def translate_from(self, text):
+        text = re.sub(r'[^\-\. \n/]+', '', text)
+
         words = text.replace('\n', '/').split('/')
         output = ''
         
