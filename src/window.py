@@ -70,14 +70,13 @@ class Mode(Enum):
 class MorseWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'MorseWindow'
 
-    flip_button = Gtk.Template.Child()
-
     input_group = Gtk.Template.Child()
     output_group = Gtk.Template.Child()
 
     input_text_view = Gtk.Template.Child()
     output_text_view = Gtk.Template.Child()
 
+    switch_button = Gtk.Template.Child()
     copy_button = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
@@ -90,7 +89,7 @@ class MorseWindow(Adw.ApplicationWindow):
         input_buffer = self.input_text_view.get_buffer()
         input_buffer.connect('changed', self.__on_input_changed);
 
-        self.flip_button.connect('clicked', self.__on_flip_button_clicked)
+        self.switch_button.connect('clicked', self.__on_switch_button_clicked)
         self.copy_button.connect('clicked', self.__on_copy_button_clicked);
 
         self.input_text_view.grab_focus()
@@ -107,18 +106,16 @@ class MorseWindow(Adw.ApplicationWindow):
         output_buffer = self.output_text_view.get_buffer()
         output_buffer.set_text(output_message)
 
-    def __on_flip_button_clicked(self, button):
+    def __on_switch_button_clicked(self, button):
         self.input_text_view.grab_focus()
 
         self.clear_text(self.output_text_view)
         self.clear_text(self.input_text_view)
 
-        flip_button_content = self.flip_button.get_child()
-
         if self.mode == Mode.FROM_MORSE:
             self.mode = Mode.TO_MORSE
 
-            flip_button_content.set_label(_('From Morse'))
+            button.set_tooltip_text(_('Translate From Morse'))
 
             self.input_group.set_title(_('Message'))
             self.output_group.set_title(_('Morse Code'))
@@ -130,7 +127,7 @@ class MorseWindow(Adw.ApplicationWindow):
         if self.mode == Mode.TO_MORSE:
             self.mode = Mode.FROM_MORSE
 
-            flip_button_content.set_label(_('To Morse'))
+            button.set_tooltip_text(_('Translate to Morse'))
 
             self.input_group.set_title(_('Morse Code'))
             self.output_group.set_title(_('Message'))

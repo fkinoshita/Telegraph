@@ -19,19 +19,6 @@
             </style>
 
             <child type="start">
-              <object class="GtkButton" id="flip_button">
-
-                <child>
-                  <object class="AdwButtonContent">
-                    <property name="label" translatable="yes">From Morse</property>
-                    <property name="icon-name">object-flip-vertical-symbolic</property>
-                  </object>
-                </child>
-
-              </object>
-            </child>
-
-            <child type="end">
               <object class="GtkMenuButton">
                 <property name="primary">true</property>
                 <property name="menu-model">primary_menu</property>
@@ -57,6 +44,24 @@
             <child>
               <object class="AdwPreferencesGroup" id="input_group">
                 <property name="title" translatable="yes">Message</property>
+
+                <property name="header-suffix">
+                  <object class="GtkButton" id="switch_button">
+                    <property name="tooltip-text" translatable="yes">Translate From Morse</property>
+
+                    <style>
+                      <class name="flat"/>
+                    </style>
+
+                    <child>
+                      <object class="AdwButtonContent">
+                        <property name="label" translatable="yes">Switch</property>
+                        <property name="icon-name">emblem-synchronizing-symbolic</property>
+                      </object>
+                    </child>
+
+                  </object>
+                </property>
 
                 <child>
                   <object class="GtkBox">
