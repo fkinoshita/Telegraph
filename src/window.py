@@ -79,6 +79,7 @@ class MorseWindow(Adw.ApplicationWindow):
     switch_button = Gtk.Template.Child()
     copy_button = Gtk.Template.Child()
 
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
@@ -94,6 +95,7 @@ class MorseWindow(Adw.ApplicationWindow):
 
         self.input_text_view.grab_focus()
 
+
     def __on_input_changed(self, input_buffer):
         (start, end) = input_buffer.get_bounds()
         text = input_buffer.get_text(start, end, False)
@@ -105,6 +107,7 @@ class MorseWindow(Adw.ApplicationWindow):
 
         output_buffer = self.output_text_view.get_buffer()
         output_buffer.set_text(output_message)
+
 
     def __on_switch_button_clicked(self, button):
         self.input_text_view.grab_focus()
@@ -136,6 +139,7 @@ class MorseWindow(Adw.ApplicationWindow):
 
             return
 
+
     def __on_copy_button_clicked(self, button):
         output_buffer = self.output_text_view.get_buffer()
         (start, end) = output_buffer.get_bounds()
@@ -145,6 +149,7 @@ class MorseWindow(Adw.ApplicationWindow):
             return
 
         Gdk.Display.get_default().get_clipboard().set(output)
+
 
     def translate_to(self, text):
         text = re.sub(r'[^A-Za-z0-9 \n]+', '', text)
@@ -163,6 +168,7 @@ class MorseWindow(Adw.ApplicationWindow):
                 output += ' / '
 
         return output
+
 
     def translate_from(self, text):
         text = re.sub(r'[^\-\.0-9 \n/]+', '', text)
@@ -185,7 +191,9 @@ class MorseWindow(Adw.ApplicationWindow):
 
         return output
 
+
     def clear_text(self, text_view):
         output_buffer = text_view.get_buffer()
         output_buffer.set_text('')
+
     
