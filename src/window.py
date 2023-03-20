@@ -74,7 +74,6 @@ class MorseWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
 
         self.mode = Mode.TO_MORSE
-        print(self.mode)
 
         input_buffer = self.input_text_view.get_buffer()
         input_buffer.connect('changed', self.__on_input_changed);
