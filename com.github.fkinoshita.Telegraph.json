@@ -1,9 +1,9 @@
 {
-    "app-id" : "com.github.fkinoshita.Morse",
+    "app-id" : "com.github.fkinoshita.Telegraph",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "44beta",
     "sdk" : "org.gnome.Sdk",
-    "command" : "morse",
+    "command" : "telegraph",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
@@ -24,7 +24,7 @@
     ],
     "modules" : [
         {
-            "name" : "morse",
+            "name" : "telegraph",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [

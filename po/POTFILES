@@ -1,6 +1,6 @@
-data/com.github.fkinoshita.Morse.desktop.in
-data/com.github.fkinoshita.Morse.appdata.xml.in
-data/com.github.fkinoshita.Morse.gschema.xml
+data/com.github.fkinoshita.Telegraph.desktop.in
+data/com.github.fkinoshita.Telegraph.appdata.xml.in
+data/com.github.fkinoshita.Telegraph.gschema.xml
 src/main.py
 src/window.py
 src/window.ui

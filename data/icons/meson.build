@@ -1,4 +1,4 @@
-application_id = 'com.github.fkinoshita.Morse'
+application_id = 'com.github.fkinoshita.Telegraph'
 
 scalable_dir = join_paths('hicolor', 'scalable', 'apps')
 install_data(

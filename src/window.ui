@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="MorseWindow" parent="AdwApplicationWindow">
-    <property name="title">Morse</property>
+  <template class="TelegraphWindow" parent="AdwApplicationWindow">
+    <property name="title">Telegraph</property>
     <property name="default-width">400</property>
     <property name="default-height">550</property>
 
@@ -174,7 +174,7 @@
       </item>
 
       <item>
-        <attribute name="label" translatable="yes">_About Morse</attribute>
+        <attribute name="label" translatable="yes">_About Telegraph</attribute>
         <attribute name="action">app.about</attribute>
       </item>
 

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schemalist gettext-domain="morse">
-	<schema id="com.github.fkinoshita.Morse" path="/com/github/fkinoshita/Morse/">
-	</schema>
-</schemalist>

@@ -24,15 +24,15 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw
-from .window import MorseWindow
+from .window import TelegraphWindow
 
 
-class MorseApplication(Adw.Application):
+class TelegraphApplication(Adw.Application):
     """The main application singleton class."""
 
 
     def __init__(self):
-        super().__init__(application_id='com.github.fkinoshita.Morse',
+        super().__init__(application_id='com.github.fkinoshita.Telegraph',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
 
         quit_action = Gio.SimpleAction.new("quit", None)
@@ -57,7 +57,7 @@ class MorseApplication(Adw.Application):
         """
         win = self.props.active_window
         if not win:
-            win = MorseWindow(application=self)
+            win = TelegraphWindow(application=self)
         win.present()
 
 
@@ -74,8 +74,8 @@ class MorseApplication(Adw.Application):
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
-                                application_name='Morse',
-                                application_icon='com.github.fkinoshita.Morse',
+                                application_name='Telegraph',
+                                application_icon='com.github.fkinoshita.Telegraph',
                                 developer_name='Felipe Kinoshita',
                                 version='0.1.0',
                                 developers=['Felipe Kinoshita'],
@@ -105,5 +105,5 @@ class MorseApplication(Adw.Application):
 
 def main(version):
     """The application's entry point."""
-    app = MorseApplication()
+    app = TelegraphApplication()
     return app.run(sys.argv)

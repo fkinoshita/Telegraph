@@ -1,6 +1,6 @@
 #!@PYTHON@
 
-# morse.in
+# telegraph.in
 #
 # Copyright 2023 Felipe Kinoshita
 #
@@ -31,16 +31,16 @@ localedir = '@localedir@'
 
 sys.path.insert(1, pkgdatadir)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
-locale.bindtextdomain('morse', localedir)
-locale.textdomain('morse')
-gettext.install('morse', localedir)
+locale.bindtextdomain('telegraph', localedir)
+locale.textdomain('telegraph')
+gettext.install('telegraph', localedir)
 
 if __name__ == '__main__':
     import gi
 
     from gi.repository import Gio
-    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'morse.gresource'))
+    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'telegraph.gresource'))
     resource._register()
 
-    from morse import main
+    from telegraph import main
     sys.exit(main.main(VERSION))

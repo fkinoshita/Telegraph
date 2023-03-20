@@ -1,5 +1,5 @@
-# Morse
+# Telegraph
 
 Translate to and from morse.
 
-![screenshot](/data/screenshots/morse.png)
+![screenshot](/data/screenshots/telegraph.png)

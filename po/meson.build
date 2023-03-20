@@ -1,1 +1,1 @@
-i18n.gettext('morse', preset: 'glib')
+i18n.gettext('telegraph', preset: 'glib')
