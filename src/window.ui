@@ -121,6 +121,7 @@
 
                 <child>
                   <object class="GtkBox">
+                    <property name="can-focus">false</property>
                     <property name="hexpand">true</property>
                     <property name="vexpand">true</property>
 
