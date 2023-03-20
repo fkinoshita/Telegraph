@@ -83,6 +83,8 @@ class MorseWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
+        self.set_size_request(350, 450)
+
         self.mode = Mode.TO_MORSE
 
         input_buffer = self.input_text_view.get_buffer()
