@@ -161,10 +161,9 @@ class MorseWindow(Adw.ApplicationWindow):
             letters = list(filter(None, letters))
 
             for inner_index, letter in enumerate(letters):
-                character = list(morse_table.keys())[list(morse_table.values()).index(letter)]
-
-                if character != None:
-                    output += character
+                for key, value in morse_table.items():
+                    if letter == value:
+                        output += key
 
             output += ' '
 
