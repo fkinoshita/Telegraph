@@ -109,10 +109,12 @@ class MorseWindow(Adw.ApplicationWindow):
         self.clear_text(self.output_text_view)
         self.clear_text(self.input_text_view)
 
+        flip_button_content = self.flip_button.get_child()
+
         if self.mode == Mode.FROM_MORSE:
             self.mode = Mode.TO_MORSE
 
-            self.flip_button.set_tooltip_text(_('From Morse'))
+            flip_button_content.set_label(_('From Morse'))
 
             self.input_group.set_title(_('Message'))
             self.output_group.set_title(_('Morse Code'))
@@ -124,7 +126,7 @@ class MorseWindow(Adw.ApplicationWindow):
         if self.mode == Mode.TO_MORSE:
             self.mode = Mode.FROM_MORSE
 
-            self.flip_button.set_tooltip_text(_('To Morse'))
+            flip_button_content.set_label(_('To Morse'))
 
             self.input_group.set_title(_('Morse Code'))
             self.output_group.set_title(_('Message'))
