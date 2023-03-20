@@ -128,6 +128,10 @@ class MorseWindow(Adw.ApplicationWindow):
 
 
     def __on_copy_button_clicked(self, button):
+        self.copy()
+
+
+    def copy(self):
         output_buffer = self.output_text_view.get_buffer()
         (start, end) = output_buffer.get_bounds()
         output = output_buffer.get_text(start, end, False)
