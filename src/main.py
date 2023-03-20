@@ -33,7 +33,12 @@ class MorseApplication(Adw.Application):
     def __init__(self):
         super().__init__(application_id='com.github.fkinoshita.Morse',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
-        self.create_action('quit', self.quit, ['<primary>q'])
+
+        quit_action = Gio.SimpleAction.new("quit", None)
+        quit_action.connect("activate", self.on_quit_action)
+        self.add_action(quit_action)
+        self.set_accels_for_action("app.quit", ["<Control>q"])
+
         self.create_action('about', self.on_about_action)
 
     def do_activate(self):
@@ -57,6 +62,9 @@ class MorseApplication(Adw.Application):
                                 developers=['Felipe Kinoshita'],
                                 copyright='© 2023 Felipe Kinoshita')
         about.present()
+
+    def on_quit_action(self, widget, _):
+        self.quit()
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.
