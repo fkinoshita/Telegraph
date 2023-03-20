@@ -30,6 +30,7 @@ from .window import MorseWindow
 class MorseApplication(Adw.Application):
     """The main application singleton class."""
 
+
     def __init__(self):
         super().__init__(application_id='com.github.fkinoshita.Morse',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
@@ -47,6 +48,7 @@ class MorseApplication(Adw.Application):
         self.create_action('copy', self.on_copy_action)
         self.set_accels_for_action("app.copy", ["<Control>c"])
 
+
     def do_activate(self):
         """Called when the application is activated.
 
@@ -58,13 +60,16 @@ class MorseApplication(Adw.Application):
             win = MorseWindow(application=self)
         win.present()
 
+
     def on_switch_action(self, widget, _):
         win = self.props.active_window
         win.switch()
 
+
     def on_copy_action(self, widget, _):
         win = self.props.active_window
         win.copy()
+
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
@@ -77,8 +82,10 @@ class MorseApplication(Adw.Application):
                                 copyright='© 2023 Felipe Kinoshita')
         about.present()
 
+
     def on_quit_action(self, widget, _):
         self.quit()
+
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.
