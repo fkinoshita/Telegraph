@@ -103,6 +103,7 @@
 
                 <property name="header-suffix">
                   <object class="GtkButton" id="copy_button">
+                    <property name="sensitive">false</property>
                     <property name="tooltip-text" translatable="yes">Copy to Clipboard</property>
 
                     <style>

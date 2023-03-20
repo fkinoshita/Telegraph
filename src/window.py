@@ -108,6 +108,13 @@ class MorseWindow(Adw.ApplicationWindow):
         output_buffer = self.output_text_view.get_buffer()
         output_buffer.set_text(output_message)
 
+        (start, end) = output_buffer.get_bounds()
+        output = output_buffer.get_text(start, end, False)
+        if len(output) == 0:
+            self.copy_button.set_sensitive(False)
+        else:
+            self.copy_button.set_sensitive(True)
+
 
     def __on_switch_button_clicked(self, button):
         self.input_text_view.grab_focus()
