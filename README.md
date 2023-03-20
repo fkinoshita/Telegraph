@@ -1,5 +1,5 @@
 # Morse
 
-Translate morse.
+Translate to and from morse.
 
 ![screenshot](/data/screenshots/morse.png)
