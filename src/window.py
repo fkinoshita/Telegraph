@@ -120,10 +120,10 @@ class MorseWindow(Adw.ApplicationWindow):
         self.switch()
 
         if self.mode == Mode.FROM_MORSE:
-            button.set_tooltip_text(_('Translate From Morse'))
+            button.set_tooltip_text(_('Translate to Morse'))
             return
         if self.mode == Mode.TO_MORSE:
-            button.set_tooltip_text(_('Translate to Morse'))
+            button.set_tooltip_text(_('Translate From Morse'))
             return
 
 
