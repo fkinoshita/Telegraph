@@ -50,6 +50,16 @@ morse_table = {
     'x': '-..-',
     'y': '-.--',
     'z': '--..',
+    '1': '.----',
+    '2': '..---',
+    '3': '...--',
+    '4': '....-',
+    '5': '.....',
+    '6': '-....',
+    '7': '--...',
+    '8': '---..',
+    '9': '----.',
+    '0': '-----',
 }
 
 class Mode(Enum):
@@ -152,7 +162,7 @@ class MorseWindow(Adw.ApplicationWindow):
         return output
 
     def translate_from(self, text):
-        text = re.sub(r'[^\-\. \n/]+', '', text)
+        text = re.sub(r'[^\-\.0-9 \n/]+', '', text)
 
         words = text.replace('\n', '/').split('/')
         output = ''
