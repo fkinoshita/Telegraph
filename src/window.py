@@ -102,6 +102,8 @@ class MorseWindow(Adw.ApplicationWindow):
         if self.mode == Mode.FROM_MORSE:
             self.mode = Mode.TO_MORSE
 
+            self.flip_button.set_tooltip_text(_('From Morse'))
+
             self.input_group.set_title(_('Message'))
             self.output_group.set_title(_('Morse Code'))
             self.input_text_view.set_monospace(False)
@@ -111,6 +113,8 @@ class MorseWindow(Adw.ApplicationWindow):
 
         if self.mode == Mode.TO_MORSE:
             self.mode = Mode.FROM_MORSE
+
+            self.flip_button.set_tooltip_text(_('To Morse'))
 
             self.input_group.set_title(_('Morse Code'))
             self.output_group.set_title(_('Message'))
