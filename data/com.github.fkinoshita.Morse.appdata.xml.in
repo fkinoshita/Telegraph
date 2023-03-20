@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
 	<id>com.github.fkinoshita.Morse.desktop</id>
+  <launchable type="desktop-id">com.github.fkinoshita.Morse.desktop</launchable>
+  <name translatable="no">Morse</name>
+  <developer_name translatable="no">Felipe Kinoshita</developer_name>
+  <update_contact>kinofhek@gmail.com</update_contact>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
+  <summary>Translate to and from morse</summary>
 	<description>
-	  <p>No description</p>
+	  <p>
+	    Morse let's you toggle between translating to morse and from morse. You can easily copy the output from both modes.
+	  </p>
 	</description>
+  <url type="homepage">https://github.com/fkinoshita/Morse</url>
+  <url type="bugtracker">https://github.com/fkinoshita/Morse/issues</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>
+        https://raw.githubusercontent.com/fkinoshita/Morse/main/data/screenshots/morse.png
+      </image>
+      <caption>Main window</caption>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1" />
+  <kudos>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+  </kudos>
 </component>
