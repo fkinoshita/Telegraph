@@ -117,6 +117,28 @@ class MorseWindow(Adw.ApplicationWindow):
 
 
     def __on_switch_button_clicked(self, button):
+        self.switch()
+
+        if self.mode == Mode.FROM_MORSE:
+            button.set_tooltip_text(_('Translate From Morse'))
+            return
+        if self.mode == Mode.TO_MORSE:
+            button.set_tooltip_text(_('Translate to Morse'))
+            return
+
+
+    def __on_copy_button_clicked(self, button):
+        output_buffer = self.output_text_view.get_buffer()
+        (start, end) = output_buffer.get_bounds()
+        output = output_buffer.get_text(start, end, False)
+
+        if (len(output) == 0):
+            return
+
+        Gdk.Display.get_default().get_clipboard().set(output)
+
+
+    def switch(self):
         self.input_text_view.grab_focus()
 
         input_buffer = self.input_text_view.get_buffer()
@@ -133,8 +155,6 @@ class MorseWindow(Adw.ApplicationWindow):
         if self.mode == Mode.FROM_MORSE:
             self.mode = Mode.TO_MORSE
 
-            button.set_tooltip_text(_('Translate From Morse'))
-
             self.input_group.set_title(_('Message'))
             self.output_group.set_title(_('Morse Code'))
             self.input_text_view.set_monospace(False)
@@ -145,26 +165,12 @@ class MorseWindow(Adw.ApplicationWindow):
         if self.mode == Mode.TO_MORSE:
             self.mode = Mode.FROM_MORSE
 
-            button.set_tooltip_text(_('Translate to Morse'))
-
             self.input_group.set_title(_('Morse Code'))
             self.output_group.set_title(_('Message'))
             self.input_text_view.set_monospace(True)
             self.output_text_view.set_monospace(False)
 
             return
-
-
-    def __on_copy_button_clicked(self, button):
-        output_buffer = self.output_text_view.get_buffer()
-        (start, end) = output_buffer.get_bounds()
-        output = output_buffer.get_text(start, end, False)
-
-        if (len(output) == 0):
-            return
-
-        Gdk.Display.get_default().get_clipboard().set(output)
-
 
     def translate_to(self, text):
         text = re.sub(r'[^A-Za-z0-9 \n]+', '', text)
