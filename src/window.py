@@ -66,7 +66,7 @@ class Mode(Enum):
     TO_MORSE = 1
     FROM_MORSE = 2
 
-@Gtk.Template(resource_path='/com/github/fkinoshita/Telegraph/window.ui')
+@Gtk.Template(resource_path='/com/github/fkinoshita/Telegraph/ui/window.ui')
 class TelegraphWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'TelegraphWindow'
 

@@ -3,8 +3,8 @@
   <gresource prefix="/com/github/fkinoshita/Telegraph">
     <file compressed="true">style.css</file>
 
-    <file preprocess="xml-stripblanks">window.ui</file>
-    <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+    <file preprocess="xml-stripblanks">ui/window.ui</file>
+    <file preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">ui/gtk/help-overlay.ui</file>
 
     <file preprocess="xml-stripblanks">icons/switch-symbolic.svg</file>
   </gresource>
