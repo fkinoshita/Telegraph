@@ -1,3 +1,14 @@
+DATA_DIR = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
+
+gnome.compile_resources(
+  'resources',
+  'resources.gresource.xml',
+  gresource_bundle: true,
+  source_dir: meson.current_build_dir(),
+  install_dir: DATA_DIR,
+  install: true,
+)
+
 desktop_file = i18n.merge_file(
         input: 'com.github.fkinoshita.Telegraph.desktop.in',
        output: 'com.github.fkinoshita.Telegraph.desktop',
