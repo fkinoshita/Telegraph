@@ -1,4 +1,4 @@
-DATA_DIR = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
+message('compiling resources')
 
 gnome.compile_resources(
   'resources',
@@ -9,42 +9,74 @@ gnome.compile_resources(
   install: true,
 )
 
-desktop_file = i18n.merge_file(
-        input: 'com.github.fkinoshita.Telegraph.desktop.in',
-       output: 'com.github.fkinoshita.Telegraph.desktop',
-         type: 'desktop',
-       po_dir: '../po',
-      install: true,
-  install_dir: join_paths(get_option('datadir'), 'applications')
+gschema_conf = configuration_data()
+gschema_conf.set('APP_ID', application_id)
+gschema_conf.set('GETTEXT_PACKAGE', gettext_package)
+configure_file(
+    input: '@0@.gschema.xml.in'.format(project_id),
+    output: '@0@.gschema.xml'.format(application_id),
+    configuration: gschema_conf,
+    install: true,
+    install_dir: 'share/glib-2.0/schemas'
 )
 
-desktop_utils = find_program('desktop-file-validate', required: false)
-if desktop_utils.found()
-  test('Validate desktop file', desktop_utils, args: [desktop_file])
+desktop_conf = configuration_data()
+desktop_conf.set('ICON', application_id)
+desktop = i18n.merge_file(
+  input: configure_file(
+    input: files('com.github.fkinoshita.Telegraph.desktop.in.in'),
+    output: 'com.github.fkinoshita.Telegraph.desktop.in',
+    configuration: desktop_conf
+  ),
+  output: '@0@.desktop'.format(application_id),
+  po_dir: join_paths(meson.project_source_root(), 'po'),
+  type: 'desktop',
+  install: true,
+  install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'applications')
+)
+
+# Validating the desktop file
+desktop_file_validate = find_program('desktop-file-validate', required:false)
+if desktop_file_validate.found()
+  test (
+    'Validate desktop file',
+    desktop_file_validate,
+    args: join_paths(meson.current_build_dir (), application_id + '.desktop')
+  )
 endif
 
-appstream_file = i18n.merge_file(
-        input: 'com.github.fkinoshita.Telegraph.appdata.xml.in',
-       output: 'com.github.fkinoshita.Telegraph.appdata.xml',
-       po_dir: '../po',
-      install: true,
-  install_dir: join_paths(get_option('datadir'), 'appdata')
+metainfo_conf = configuration_data()
+metainfo_conf.set('APPID', application_id)
+metainfo_conf.set('GETTEXT_PACKAGE', meson.project_name())
+metainfo_conf.set('NAME', project_name)
+metainfo = i18n.merge_file(
+  input: configure_file(
+    input: files('com.github.fkinoshita.Telegraph.metainfo.xml.in.in'),
+    output: 'com.github.fkinoshita.Telegraph.metainfo.xml.in',
+    configuration: metainfo_conf
+  ),
+  output: application_id + '.metainfo.xml',
+  install: true,
+  install_dir: join_paths(join_paths('share'), 'metainfo'),
+  po_dir: join_paths(meson.project_source_root(), 'po')
 )
 
-appstream_util = find_program('appstream-util', required: false)
-if appstream_util.found()
-  test('Validate appstream file', appstream_util, args: ['validate', appstream_file])
+# Validating the metainfo file
+appstreamcli = find_program('appstream-util', required: false)
+if appstreamcli.found()
+  test (
+    'Validate metainfo file',
+    appstreamcli,
+    args: ['validate-relax', '--nonet', join_paths(meson.current_build_dir (), application_id + '.metainfo.xml')]
+  )
 endif
 
-install_data('com.github.fkinoshita.Telegraph.gschema.xml',
-  install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
-)
-
+# Validating schemas
 compile_schemas = find_program('glib-compile-schemas', required: false)
 if compile_schemas.found()
-  test('Validate schema file',
-       compile_schemas,
-       args: ['--strict', '--dry-run', meson.current_source_dir()])
+  test('Validate schema file', compile_schemas,
+    args: ['--strict', '--dry-run', meson.current_source_dir()]
+  )
 endif
 
 subdir('icons')

@@ -1,0 +1,16 @@
+[Desktop Entry]
+# Translators: Secrets is the app name, do not translate
+Name=Telegraph
+Comment=A Morse translator for GNOME
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+Icon=@ICON@
+Exec=telegraph
+Terminal=false
+Type=Application
+Categories=Utility;GTK;GNOME;
+# Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+Keywords=morse;code;translator;translate;
+# Translators: Do NOT translate or transliterate this text (these are enum types)!
+X-Purism-FormFactor=Workstation;
+# Translators: Do NOT translate
+X-GNOME-SingleWindow=true

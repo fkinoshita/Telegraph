@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+  <!-- Copyright 2023 Felipe Kinoshita -->
 <component type="desktop">
-	<id>com.github.fkinoshita.Telegraph.desktop</id>
-  <launchable type="desktop-id">com.github.fkinoshita.Telegraph.desktop</launchable>
-  <name translatable="no">Telegraph</name>
+	<id>@APPID@</id>
+  <launchable type="desktop-id">@APPID@.desktop</launchable>
+  <name translatable="no">@NAME@</name>
   <developer_name translatable="no">Felipe Kinoshita</developer_name>
   <update_contact>kinofhek@gmail.com</update_contact>
 	<metadata_license>CC0-1.0</metadata_license>
