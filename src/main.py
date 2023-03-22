@@ -73,14 +73,12 @@ class TelegraphApplication(Adw.Application):
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
-        about = Adw.AboutWindow(transient_for=self.props.active_window,
-                                application_name='Telegraph',
-                                application_icon='com.github.fkinoshita.Telegraph',
-                                developer_name='Felipe Kinoshita',
-                                version='0.1.0',
-                                developers=['Felipe Kinoshita'],
-                                copyright='© 2023 Felipe Kinoshita')
-        about.present()
+        builder = Gtk.Builder.new_from_resource(
+            "/com/github/fkinoshita/Telegraph/about_dialog.ui"
+        )
+        about_dialog = builder.get_object("about_dialog")
+        about_dialog.set_transient_for(self.props.active_window)
+        about_dialog.present()
 
 
     def on_quit_action(self, widget, _):

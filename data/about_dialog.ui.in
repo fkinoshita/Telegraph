@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="AdwAboutWindow" id="about_dialog">
+    <property name="version">@VERSION@</property>
+    <property name="copyright">@COPYRIGHT@</property>
+    <property name="comments" translatable="yes">Translate to and from morse</property>
+    <property name="website">@PACKAGE_URL@</property>
+    <property name="developers">@CONTRIBUTORS@</property>
+    <property name="developer_name">Felipe Kinoshita</property>
+    <property name="translator_credits" translatable="yes" comments="Add your name to the translator credits list">translator-credits</property>
+    <property name="designers">@ARTISTS@</property>
+    <property name="application_name" translatable="yes">Telegraph</property>
+    <property name="application_icon">@APPID@</property>
+    <property name="license_type">gpl-3-0-only</property>
+    <property name="release_notes_version">0</property>
+    <property name="issue_url">https://github.com/fkinoshita/Telegraph/issues/new</property>
+  </object>
+</interface>
+

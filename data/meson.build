@@ -1,5 +1,13 @@
 message('compiling resources')
 
+about_conf = configuration_data()
+about_conf.set('PACKAGE_URL', package_url)
+about_conf.set('CONTRIBUTORS', contributors)
+# about_conf.set('ARTISTS', artists)
+about_conf.set('APPID', application_id)
+about_conf.set('VERSION', version)
+about_conf.set('COPYRIGHT', copyright)
+
 gnome.compile_resources(
   'resources',
   'resources.gresource.xml',
@@ -7,6 +15,11 @@ gnome.compile_resources(
   source_dir: meson.current_build_dir(),
   install_dir: DATA_DIR,
   install: true,
+  dependencies: configure_file (
+    input: 'about_dialog.ui.in',
+    output: '@BASENAME@',
+    configuration: about_conf
+  )
 )
 
 gschema_conf = configuration_data()

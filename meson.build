@@ -26,6 +26,7 @@ dependency('libadwaita-1', version: '>=1.2')
 DATA_DIR = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
 
 application_id = project_id
+version = meson.project_version()
 
 top_source_dir = meson.current_source_dir()
 gettext_package = meson.project_name()
