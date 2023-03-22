@@ -1,7 +1,7 @@
 {
     "app-id" : "com.github.fkinoshita.Telegraph",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "44beta",
+    "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
     "command" : "telegraph",
     "finish-args" : [
