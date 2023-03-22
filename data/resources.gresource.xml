@@ -7,6 +7,6 @@
     <file preprocess="xml-stripblanks">ui/window.ui</file>
     <file preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">ui/gtk/help-overlay.ui</file>
 
-    <file preprocess="xml-stripblanks">icons/switch-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/switch-symbolic.svg</file>
   </gresource>
 </gresources>
