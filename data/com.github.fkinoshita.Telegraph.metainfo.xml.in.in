@@ -11,8 +11,14 @@
   <summary>Translate to and from morse</summary>
 	<description>
 	  <p>
-	    Telegraph let's you toggle between translating to morse and from morse. You can easily copy the output from both modes.
+	    Telegraph is a simple Morse translator, you can switch between inputting
+	    Morse or inputting regular letters and numbers.
 	  </p>
+	  <p>Features:</p>
+	  <ul>
+	    <li>Quickly switch between modes</li>
+	    <li>Copy output with ease</li>
+	  </ul>
 	</description>
   <url type="homepage">https://github.com/fkinoshita/Telegraph</url>
   <url type="bugtracker">https://github.com/fkinoshita/Telegraph/issues</url>
