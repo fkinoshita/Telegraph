@@ -18,6 +18,11 @@
   <requires>
     <display_length compare="ge">350</display_length>
   </requires>
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </recommends>
   <url type="homepage">https://github.com/fkinoshita/Telegraph</url>
   <url type="bugtracker">https://github.com/fkinoshita/Telegraph/issues</url>
   <url type="donation">https://ko-fi.com/fkinoshita</url>
