@@ -3,7 +3,7 @@
   <object class="AdwAboutWindow" id="about_dialog">
     <property name="version">@VERSION@</property>
     <property name="copyright">@COPYRIGHT@</property>
-    <property name="comments" translatable="yes">Translate to and from morse</property>
+    <property name="comments" translatable="yes">Write and decode morse</property>
     <property name="website">@PACKAGE_URL@</property>
     <property name="developers">@CONTRIBUTORS@</property>
     <property name="developer_name">Felipe Kinoshita</property>

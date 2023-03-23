@@ -8,7 +8,7 @@
   <update_contact>kinofhek@gmail.com</update_contact>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
-  <summary>Translate to and from morse</summary>
+  <summary>Write and decode morse</summary>
 	<description>
 	  <p>
 	    Telegraph is a simple Morse translator, you can switch between inputting
