@@ -16,9 +16,12 @@ copyright = '© 2023 Felipe Kinoshita.'
 contributors = '\n'.join([
     'Felipe Kinoshita',
 ])
-# artists = '\n'.join([
-#   '',
-# ])
+designers = '\n'.join([
+  '',
+])
+artists = '\n'.join([
+  '',
+])
 
 dependency('gtk4', version: '>=4.9')
 dependency('libadwaita-1', version: '>=1.2')

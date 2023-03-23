@@ -8,8 +8,8 @@
     <property name="developers">@CONTRIBUTORS@</property>
     <property name="developer_name">Felipe Kinoshita</property>
     <property name="translator_credits" translatable="yes" comments="Add your name to the translator credits list">translator-credits</property>
-    <property name="designers">@ARTISTS@</property>
-    <property name="artists">Brage Fuglseth</property>
+    <property name="designers">@DESIGNERS@</property>
+    <property name="artists">@ARTISTS@</property>
     <property name="application_name" translatable="yes">Telegraph</property>
     <property name="application_icon">@APPID@</property>
     <property name="license_type">gpl-3-0-only</property>
