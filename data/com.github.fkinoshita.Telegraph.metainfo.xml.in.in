@@ -25,6 +25,11 @@
       </image>
       <caption>Main window</caption>
     </screenshot>
+    <screenshot>
+      <image>
+        https://raw.githubusercontent.com/fkinoshita/Telegraph/main/data/screenshots/dark.png
+      </image>
+    </screenshot>
   </screenshots>
   <content_rating type="oars-1.1" />
   <kudos>
