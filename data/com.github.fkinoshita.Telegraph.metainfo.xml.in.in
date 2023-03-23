@@ -15,6 +15,9 @@
 	    Morse or inputting regular letters and numbers.
 	  </p>
 	</description>
+  <requires>
+    <display_length compare="ge">350</display_length>
+  </requires>
   <url type="homepage">https://github.com/fkinoshita/Telegraph</url>
   <url type="bugtracker">https://github.com/fkinoshita/Telegraph/issues</url>
   <url type="donation">https://ko-fi.com/fkinoshita</url>
