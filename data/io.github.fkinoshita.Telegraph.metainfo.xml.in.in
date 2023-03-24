@@ -40,6 +40,13 @@
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1" />
+  <releases>
+    <release version="0.1.0" date="2023-03-24">
+      <description>
+        <p>First release of Telegraph</p>
+      </description>
+    </release>
+  </releases>
   <kudos>
     <kudo>HiDpiIcon</kudo>
     <kudo>HighContrast</kudo>
