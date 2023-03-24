@@ -38,8 +38,8 @@ desktop_conf = configuration_data()
 desktop_conf.set('ICON', application_id)
 desktop = i18n.merge_file(
   input: configure_file(
-    input: files('com.github.fkinoshita.Telegraph.desktop.in.in'),
-    output: 'com.github.fkinoshita.Telegraph.desktop.in',
+    input: files('io.github.fkinoshita.Telegraph.desktop.in.in'),
+    output: 'io.github.fkinoshita.Telegraph.desktop.in',
     configuration: desktop_conf
   ),
   output: '@0@.desktop'.format(application_id),
@@ -65,8 +65,8 @@ metainfo_conf.set('GETTEXT_PACKAGE', meson.project_name())
 metainfo_conf.set('NAME', project_name)
 metainfo = i18n.merge_file(
   input: configure_file(
-    input: files('com.github.fkinoshita.Telegraph.metainfo.xml.in.in'),
-    output: 'com.github.fkinoshita.Telegraph.metainfo.xml.in',
+    input: files('io.github.fkinoshita.Telegraph.metainfo.xml.in.in'),
+    output: 'io.github.fkinoshita.Telegraph.metainfo.xml.in',
     configuration: metainfo_conf
   ),
   output: application_id + '.metainfo.xml',

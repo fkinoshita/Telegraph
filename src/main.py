@@ -32,7 +32,7 @@ class TelegraphApplication(Adw.Application):
 
 
     def __init__(self):
-        super().__init__(application_id='com.github.fkinoshita.Telegraph',
+        super().__init__(application_id='io.github.fkinoshita.Telegraph',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
 
         quit_action = Gio.SimpleAction.new("quit", None)
@@ -74,7 +74,7 @@ class TelegraphApplication(Adw.Application):
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
         builder = Gtk.Builder.new_from_resource(
-            "/com/github/fkinoshita/Telegraph/about_dialog.ui"
+            "/io/github/fkinoshita/Telegraph/about_dialog.ui"
         )
         about_dialog = builder.get_object("about_dialog")
         about_dialog.set_transient_for(self.props.active_window)

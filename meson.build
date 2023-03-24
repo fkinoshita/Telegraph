@@ -9,7 +9,7 @@ i18n = import('i18n')
 python = import('python')
 gnome = import('gnome')
 
-project_id = 'com.github.fkinoshita.Telegraph'
+project_id = 'io.github.fkinoshita.Telegraph'
 project_name = 'Telegraph'
 package_url = 'https://github.com/fkinoshita/Telegraph'
 copyright = '© 2023 Felipe Kinoshita.'

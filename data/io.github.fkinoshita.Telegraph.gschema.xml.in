@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="telegraph">
-	<schema id="com.github.fkinoshita.Telegraph" path="/com/github/fkinoshita/Telegraph/">
+	<schema id="io.github.fkinoshita.Telegraph" path="/io/github/fkinoshita/Telegraph/">
 	</schema>
 </schemalist>

@@ -1,9 +1,9 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
 data/about_dialog.ui.in
-data/com.github.fkinoshita.Telegraph.desktop.in.in
-data/com.github.fkinoshita.Telegraph.gschema.xml.in
-data/com.github.fkinoshita.Telegraph.metainfo.xml.in.in
+data/io.github.fkinoshita.Telegraph.desktop.in.in
+data/io.github.fkinoshita.Telegraph.gschema.xml.in
+data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in
 data/ui/gtk/help-overlay.ui
 data/ui/window.ui
 src/main.py
