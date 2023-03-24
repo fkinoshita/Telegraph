@@ -1,0 +1,16 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: telegraph
+Upstream-Contact: Felipe Kinoshita
+Source: https://github.com/fkinoshita/Telegraph
+
+Files: data/icons/hicolor/scalable/apps/io.github.fkinoshita.Telegraph.Devel.svg data/icons/hicolor/scalable/apps/io.github.fkinoshita.Telegraph.svg
+Copyright: 2023 Brage Fuglseth
+License: GPL-3.0
+
+Files: data/icons/hicolor/symbolic/apps/io.github.fkinoshita.Telegraph-symbolic.svg
+Copyright: 2023 Brage Fuglseth
+License: GPL-3.0
+
+Files: data/icons/io.github.fkinoshita.Telegraph.Source.svg
+Copyright: 2023 Brage Fuglseth
+License: GPL-3.0
