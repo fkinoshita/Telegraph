@@ -61,6 +61,26 @@ morse_table = {
     '8': '---..',
     '9': '----.',
     '0': '-----',
+    '.': '.-.-.-',
+    ',': '--..--',
+    '?': '..--..',
+    '\'': '.----.',
+    '!': '-.-.--',
+    '/': '-..-.',
+    '(': '-.--.',
+    ')': '-.--.-',
+    '&': '.-...',
+    ':': '---...',
+    ';': '-.-.-.',
+    '=': '-...-',
+    '+': '.-.-.',
+    '-': '-....-',
+    '_': '..--.-',
+    '"': '.-..-.',
+    '$': '...-..-',
+    '@': '.--.-.',
+    '¿': '..-.-',
+    '¡': '--...-',
 }
 
 class Mode(Enum):
@@ -178,14 +198,17 @@ class TelegraphWindow(Adw.ApplicationWindow):
             return
 
     def translate_to(self, text):
-        text = re.sub(r'[^A-Za-z0-9 \n]+', '', text)
+        text = re.sub(r'[* \n]+', '', text)
 
         words = text.lower().replace('\n', ' ').split(' ')
         output = ''
 
         for outer_index, word in enumerate(words):
             for inner_index, letter in enumerate(word):
-                output += morse_table[letter]
+                try:
+                    output += morse_table[letter]
+                except:
+                    output += '#'
 
                 if (inner_index + 1 != len(word)):
                     output += ' '
