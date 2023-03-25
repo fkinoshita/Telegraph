@@ -71,6 +71,8 @@ class Mode(Enum):
 class TelegraphWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'TelegraphWindow'
 
+    window_box = Gtk.Template.Child()
+
     input_group = Gtk.Template.Child()
     output_group = Gtk.Template.Child()
 
@@ -95,6 +97,14 @@ class TelegraphWindow(Adw.ApplicationWindow):
         self.copy_button.connect('clicked', self.__on_copy_button_clicked);
 
         self.input_text_view.grab_focus()
+
+    def do_size_allocate(self, width, height, baseline):
+        if width < 680:
+            self.window_box.props.orientation = Gtk.Orientation.VERTICAL
+        else:
+            self.window_box.props.orientation = Gtk.Orientation.VERTICAL
+
+        Adw.ApplicationWindow.do_size_allocate(self, width, height, baseline)
 
 
     def __on_input_changed(self, input_buffer):

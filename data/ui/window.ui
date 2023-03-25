@@ -31,7 +31,7 @@
         </child>
 
         <child>
-          <object class="GtkBox">
+          <object class="GtkBox" id="window_box">
             <property name="orientation">vertical</property>
             <property name="hexpand">true</property>
             <property name="vexpand">true</property>
