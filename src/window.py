@@ -102,7 +102,7 @@ class TelegraphWindow(Adw.ApplicationWindow):
         if width < 680:
             self.window_box.props.orientation = Gtk.Orientation.VERTICAL
         else:
-            self.window_box.props.orientation = Gtk.Orientation.VERTICAL
+            self.window_box.props.orientation = Gtk.Orientation.HORIZONTAL
 
         Adw.ApplicationWindow.do_size_allocate(self, width, height, baseline)
 
