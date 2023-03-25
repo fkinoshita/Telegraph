@@ -21,8 +21,7 @@ import re
 from enum import Enum
 from gettext import gettext as _
 
-from gi.repository import Adw
-from gi.repository import Gtk, Gdk
+from gi.repository import Adw, Gtk, Gdk
 
 morse_table = {
     'a': '.-',
