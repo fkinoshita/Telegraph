@@ -42,12 +42,13 @@
             <property name="spacing">12</property>
 
             <child>
-              <object class="AdwPreferencesGroup" id="input_group">
+              <object class="AdwPreferencesGroup" id="message_group">
                 <property name="title" translatable="yes">Message</property>
 
                 <property name="header-suffix">
-                  <object class="GtkButton" id="switch_button">
-                    <property name="tooltip-text" translatable="yes">Translate From Morse</property>
+                  <object class="GtkButton" id="message_copy_button">
+                    <property name="sensitive">false</property>
+                    <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
 
                     <style>
                       <class name="flat"/>
@@ -55,8 +56,8 @@
 
                     <child>
                       <object class="AdwButtonContent">
-                        <property name="label" translatable="yes">Switch</property>
-                        <property name="icon-name">switch-symbolic</property>
+                        <property name="label" translatable="yes">Copy</property>
+                        <property name="icon-name">edit-copy-symbolic</property>
                       </object>
                     </child>
 
@@ -81,7 +82,7 @@
                         <property name="margin-end">12</property>
 
                         <child>
-                          <object class="GtkTextView" id="input_text_view">
+                          <object class="GtkTextView" id="message_text_view">
                             <property name="wrap-mode">GTK_WRAP_WORD_CHAR</property>
                             <property name="hexpand">true</property>
                             <property name="vexpand">true</property>
@@ -98,11 +99,11 @@
             </child>
 
             <child>
-              <object class="AdwPreferencesGroup" id="output_group">
+              <object class="AdwPreferencesGroup" id="morse_group">
                 <property name="title" translatable="yes">Morse Code</property>
 
                 <property name="header-suffix">
-                  <object class="GtkButton" id="copy_button">
+                  <object class="GtkButton" id="morse_copy_button">
                     <property name="sensitive">false</property>
                     <property name="tooltip-text" translatable="yes">Copy to Clipboard</property>
 
@@ -122,7 +123,6 @@
 
                 <child>
                   <object class="GtkBox">
-                    <property name="can-focus">false</property>
                     <property name="hexpand">true</property>
                     <property name="vexpand">true</property>
 
@@ -139,9 +139,8 @@
                         <property name="margin-end">12</property>
 
                         <child>
-                          <object class="GtkTextView" id="output_text_view">
+                          <object class="GtkTextView" id="morse_text_view">
                             <property name="wrap-mode">GTK_WRAP_CHAR</property>
-                            <property name="editable">false</property>
                             <property name="monospace">true</property>
                             <property name="hexpand">true</property>
                             <property name="vexpand">true</property>
