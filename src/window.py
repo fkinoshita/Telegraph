@@ -153,7 +153,7 @@ class TelegraphWindow(Adw.ApplicationWindow):
         Gdk.Display.get_default().get_clipboard().set(output)
 
     def translate_to(self, text):
-        text = re.sub(r'[^A-Za-z0-9 \n:;,\'()+"!\-$?/&=_@.]+', '', text)
+        text = re.sub(r'[^A-Za-z0-9 \n]+', '', text)
 
         words = text.lower().replace('\n', ' ').split(' ')
         output = ''
@@ -172,7 +172,7 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
 
     def translate_from(self, text):
-        text = re.sub(r'[^A-Za-z0-9 \n]+', '', text)
+        text = re.sub(r'[^\-\.0-9 \n/]+', '', text)
         words = text.replace('\n', '/').split('/')
         output = ''
         
