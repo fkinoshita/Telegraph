@@ -218,8 +218,6 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
 
     def translate_from(self, text):
-        text = re.sub(r'[^\-\.0-9 \n/]+', '', text)
-
         words = text.replace('\n', '/').split('/')
         output = ''
         
