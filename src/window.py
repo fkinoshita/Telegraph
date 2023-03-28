@@ -198,7 +198,6 @@ class TelegraphWindow(Adw.ApplicationWindow):
             return
 
     def translate_to(self, text):
-        text = re.sub(r'[* \n]+', '', text)
 
         words = text.lower().replace('\n', ' ').split(' ')
         output = ''
