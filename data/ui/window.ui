@@ -66,6 +66,10 @@
                             <property name="margin-start">12</property>
                             <property name="margin-end">12</property>
 
+                            <style>
+                              <class name="scrolled-window"/>
+                            </style>
+
                             <child>
                               <object class="GtkTextView" id="message_text_view">
                                 <property name="wrap-mode">GTK_WRAP_WORD_CHAR</property>
@@ -124,6 +128,10 @@
                             <property name="margin-bottom">0</property>
                             <property name="margin-start">12</property>
                             <property name="margin-end">12</property>
+
+                            <style>
+                              <class name="scrolled-window"/>
+                            </style>
 
                             <child>
                               <object class="GtkTextView" id="morse_text_view">
