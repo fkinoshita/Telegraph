@@ -85,6 +85,8 @@ morse_table = {
 class TelegraphWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'TelegraphWindow'
 
+    window_box = Gtk.Template.Child()
+
     toast_overlay = Gtk.Template.Child()
 
     message_group = Gtk.Template.Child()
@@ -115,6 +117,15 @@ class TelegraphWindow(Adw.ApplicationWindow):
         self.timeout_buffer = 0
 
         self.message_text_view.grab_focus()
+
+
+    def do_size_allocate(self, width, height, baseline):
+        if width < 680:
+            self.window_box.props.orientation = Gtk.Orientation.VERTICAL
+        else:
+            self.window_box.props.orientation = Gtk.Orientation.HORIZONTAL
+
+        Adw.ApplicationWindow.do_size_allocate(self, width, height, baseline)
 
 
     def __on_input_changed(self, input_buffer):
