@@ -98,6 +98,7 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
         self.input_text_view.grab_focus()
 
+
     def do_size_allocate(self, width, height, baseline):
         if width < 680:
             self.window_box.props.orientation = Gtk.Orientation.VERTICAL
