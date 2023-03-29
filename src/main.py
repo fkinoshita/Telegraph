@@ -42,9 +42,6 @@ class TelegraphApplication(Adw.Application):
 
         self.create_action('about', self.on_about_action)
 
-        self.create_action('switch', self.on_switch_action)
-        self.set_accels_for_action("app.switch", ["<Control>space"])
-
 
     def do_activate(self):
         """Called when the application is activated.
@@ -56,11 +53,6 @@ class TelegraphApplication(Adw.Application):
         if not win:
             win = TelegraphWindow(application=self)
         win.present()
-
-
-    def on_switch_action(self, widget, _):
-        win = self.props.active_window
-        win.switch()
 
 
     def on_about_action(self, widget, _):
