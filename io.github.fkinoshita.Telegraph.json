@@ -28,8 +28,9 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "dir",
-                    "url" : "."
+                    "type" : "git",
+                    "url" : "https://github.com/fkinoshita/Telegraph.git",
+                    "branch" : "main"
                 }
             ]
         }

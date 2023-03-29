@@ -11,8 +11,8 @@
   <summary>Write and decode morse</summary>
 	<description>
 	  <p>
-	    Telegraph is a simple Morse translator, you can switch between inputting
-	    Morse or inputting regular letters and numbers.
+	    Telegraph is a simple Morse translator, start typing your message to see
+	    the resulting Morse code and vice versa.
 	  </p>
 	</description>
   <requires>
@@ -52,4 +52,8 @@
     <kudo>HighContrast</kudo>
     <kudo>ModernToolkit</kudo>
   </kudos>
+  <custom>
+    <value key="Purism::form_factor">workstation</value>
+    <value key="Purism::form_factor">mobile</value>
+  </custom>
 </component>
