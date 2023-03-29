@@ -18,7 +18,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import re
-from enum import Enum
 from gettext import gettext as _
 
 from gi.repository import Adw, Gtk, Gdk
@@ -62,10 +61,6 @@ morse_table = {
     '0': '-----',
 }
 
-class Mode(Enum):
-    TO_MORSE = 1
-    FROM_MORSE = 2
-
 @Gtk.Template(resource_path='/io/github/fkinoshita/Telegraph/ui/window.ui')
 class TelegraphWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'TelegraphWindow'
@@ -86,8 +81,6 @@ class TelegraphWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
 
         self.set_size_request(350, 450)
-
-        self.mode = Mode.TO_MORSE
 
         self.message_buffer = self.message_text_view.get_buffer()
         self.message_buffer.connect('changed', self.__on_input_changed);
