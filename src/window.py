@@ -18,11 +18,9 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import re
-from enum import Enum
 from gettext import gettext as _
 
-from gi.repository import Adw
-from gi.repository import Gtk, Gdk
+from gi.repository import Adw, Gtk, Gdk
 
 morse_table = {
     'a': '.-',
@@ -83,22 +81,20 @@ morse_table = {
     '¡': '--...-',
 }
 
-class Mode(Enum):
-    TO_MORSE = 1
-    FROM_MORSE = 2
-
 @Gtk.Template(resource_path='/io/github/fkinoshita/Telegraph/ui/window.ui')
 class TelegraphWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'TelegraphWindow'
 
-    input_group = Gtk.Template.Child()
-    output_group = Gtk.Template.Child()
+    toast_overlay = Gtk.Template.Child()
 
-    input_text_view = Gtk.Template.Child()
-    output_text_view = Gtk.Template.Child()
+    message_group = Gtk.Template.Child()
+    morse_group = Gtk.Template.Child()
 
-    switch_button = Gtk.Template.Child()
-    copy_button = Gtk.Template.Child()
+    message_text_view = Gtk.Template.Child()
+    morse_text_view = Gtk.Template.Child()
+
+    message_copy_button = Gtk.Template.Child()
+    morse_copy_button = Gtk.Template.Child()
 
 
     def __init__(self, **kwargs):
@@ -106,54 +102,67 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
         self.set_size_request(350, 450)
 
-        self.mode = Mode.TO_MORSE
+        self.message_buffer = self.message_text_view.get_buffer()
+        self.message_buffer.connect('changed', self.__on_input_changed);
 
-        input_buffer = self.input_text_view.get_buffer()
-        input_buffer.connect('changed', self.__on_input_changed);
+        self.morse_buffer = self.morse_text_view.get_buffer()
+        self.morse_buffer.connect('changed', self.__on_input_changed);
 
-        self.switch_button.connect('clicked', self.__on_switch_button_clicked)
-        self.copy_button.connect('clicked', self.__on_copy_button_clicked);
+        self.message_copy_button.connect('clicked', self.__on_copy_button_clicked)
+        self.morse_copy_button.connect('clicked', self.__on_copy_button_clicked);
 
-        self.input_text_view.grab_focus()
+        self.updated_buffer = None
+        self.timeout_buffer = 0
+
+        self.message_text_view.grab_focus()
 
 
     def __on_input_changed(self, input_buffer):
+        if self.timeout_buffer > 0 and input_buffer == self.updated_buffer:
+            self.timeout_buffer -= 1
+            self.updated_buffer = None if self.timeout_buffer == 0 else self.updated_buffer
+            return
         (start, end) = input_buffer.get_bounds()
         text = input_buffer.get_text(start, end, False)
 
-        if self.mode == Mode.TO_MORSE:
+        if input_buffer == self.message_buffer:
             output_message = self.translate_to(text)
-        if self.mode == Mode.FROM_MORSE:
+            self.timeout_buffer = 2
+            self.updated_buffer = self.morse_buffer
+            self.morse_buffer.set_text(output_message)
+        elif input_buffer == self.morse_buffer:
             output_message = self.translate_from(text)
+            self.timeout_buffer = 2
+            self.updated_buffer = self.message_buffer
+            self.message_buffer.set_text(output_message)
 
-        output_buffer = self.output_text_view.get_buffer()
-        output_buffer.set_text(output_message)
 
-        (start, end) = output_buffer.get_bounds()
-        output = output_buffer.get_text(start, end, False)
-        if len(output) == 0:
-            self.copy_button.set_sensitive(False)
+        (start, end) = self.morse_buffer.get_bounds()
+        morse_output = self.morse_buffer.get_text(start, end, False)
+        (start, end) = self.message_buffer.get_bounds()
+        text_output = self.message_buffer.get_text(start, end, False)
+        if len(text_output) == 0:
+            self.message_copy_button.set_sensitive(False)
         else:
-            self.copy_button.set_sensitive(True)
-
-
-    def __on_switch_button_clicked(self, button):
-        self.switch()
-
-        if self.mode == Mode.FROM_MORSE:
-            button.set_tooltip_text(_('Translate to Morse'))
-            return
-        if self.mode == Mode.TO_MORSE:
-            button.set_tooltip_text(_('Translate From Morse'))
-            return
-
+            self.message_copy_button.set_sensitive(True)
+        if len(morse_output) == 0:
+            self.morse_copy_button.set_sensitive(False)
+        else:
+            self.morse_copy_button.set_sensitive(True)
 
     def __on_copy_button_clicked(self, button):
-        self.copy()
+        self.copy(button)
 
 
-    def copy(self):
-        output_buffer = self.output_text_view.get_buffer()
+    def copy(self, button):
+        toast = Adw.Toast()
+
+        if button == self.message_copy_button:
+            output_buffer = self.message_text_view.get_buffer()
+            toast.set_title(_('Message Copied'))
+        elif button == self.morse_copy_button:
+            output_buffer = self.morse_text_view.get_buffer()
+            toast.set_title(_('Morse Code Copied'))
         (start, end) = output_buffer.get_bounds()
         output = output_buffer.get_text(start, end, False)
 
@@ -162,40 +171,7 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
         Gdk.Display.get_default().get_clipboard().set(output)
 
-
-    def switch(self):
-        self.input_text_view.grab_focus()
-
-        input_buffer = self.input_text_view.get_buffer()
-        (start, end) = input_buffer.get_bounds()
-        input_text = input_buffer.get_text(start, end, False)
-
-        output_buffer = self.output_text_view.get_buffer()
-        (start, end) = output_buffer.get_bounds()
-        output_text = output_buffer.get_text(start, end, False)
-
-        input_buffer.set_text(output_text.lower())
-        output_buffer.set_text(input_text.lower())
-
-        if self.mode == Mode.FROM_MORSE:
-            self.mode = Mode.TO_MORSE
-
-            self.input_group.set_title(_('Message'))
-            self.output_group.set_title(_('Morse Code'))
-            self.input_text_view.set_monospace(False)
-            self.output_text_view.set_monospace(True)
-
-            return
-
-        if self.mode == Mode.TO_MORSE:
-            self.mode = Mode.FROM_MORSE
-
-            self.input_group.set_title(_('Morse Code'))
-            self.output_group.set_title(_('Message'))
-            self.input_text_view.set_monospace(True)
-            self.output_text_view.set_monospace(False)
-
-            return
+        self.toast_overlay.add_toast(toast)
 
     def translate_to(self, text):
         words = text.lower().replace('\n', ' ').split(' ')
