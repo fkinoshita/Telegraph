@@ -41,6 +41,16 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="0.1.1" date="2023-03-29">
+      <description>
+        <ul>
+          <li>Remove explicit modes, you can now start typing on either text views</li>
+          <li>Layout is now responsive</li>
+          <li>Support for new characters</li>
+          <li>Small quality-of-life improvements</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.0" date="2023-03-24">
       <description>
         <p>First release of Telegraph</p>
