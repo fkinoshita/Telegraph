@@ -70,6 +70,8 @@ class Mode(Enum):
 class TelegraphWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'TelegraphWindow'
 
+    toast_overlay = Gtk.Template.Child()
+
     message_group = Gtk.Template.Child()
     morse_group = Gtk.Template.Child()
 
@@ -140,10 +142,14 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
 
     def copy(self, button):
+        toast = Adw.Toast()
+
         if button == self.message_copy_button:
             output_buffer = self.message_text_view.get_buffer()
+            toast.set_title(_('Message Copied'))
         elif button == self.morse_copy_button:
             output_buffer = self.morse_text_view.get_buffer()
+            toast.set_title(_('Morse Code Copied'))
         (start, end) = output_buffer.get_bounds()
         output = output_buffer.get_text(start, end, False)
 
@@ -151,6 +157,8 @@ class TelegraphWindow(Adw.ApplicationWindow):
             return
 
         Gdk.Display.get_default().get_clipboard().set(output)
+
+        self.toast_overlay.add_toast(toast)
 
     def translate_to(self, text):
         text = re.sub(r'[^A-Za-z0-9 \n]+', '', text)
