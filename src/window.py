@@ -231,6 +231,8 @@ class TelegraphWindow(Adw.ApplicationWindow):
                 for key, value in morse_table.items():
                     if letter == value:
                         output += key
+                if letter == '#':
+                    output += '#'
 
             output += ' '
 
