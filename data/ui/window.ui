@@ -9,7 +9,7 @@
       <object class="AdwToastOverlay" id="toast_overlay">
 
         <property name="child">
-          <object class="GtkBox" id="window_box">
+          <object class="GtkBox">
             <property name="orientation">vertical</property>
             <property name="hexpand">true</property>
             <property name="vexpand">true</property>
@@ -34,7 +34,7 @@
             </child>
 
             <child>
-              <object class="GtkBox">
+              <object class="GtkBox" id="window_box">
                 <property name="orientation">vertical</property>
                 <property name="hexpand">true</property>
                 <property name="vexpand">true</property>
