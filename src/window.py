@@ -59,6 +59,26 @@ morse_table = {
     '8': '---..',
     '9': '----.',
     '0': '-----',
+    '.': '.-.-.-',
+    ',': '--..--',
+    '?': '..--..',
+    '\'': '.----.',
+    '!': '-.-.--',
+    '/': '-..-.',
+    '(': '-.--.',
+    ')': '-.--.-',
+    '&': '.-...',
+    ':': '---...',
+    ';': '-.-.-.',
+    '=': '-...-',
+    '+': '.-.-.',
+    '-': '-....-',
+    '_': '..--.-',
+    '"': '.-..-.',
+    '$': '...-..-',
+    '@': '.--.-.',
+    '¿': '..-.-',
+    '¡': '--...-',
 }
 
 @Gtk.Template(resource_path='/io/github/fkinoshita/Telegraph/ui/window.ui')
@@ -154,14 +174,15 @@ class TelegraphWindow(Adw.ApplicationWindow):
         self.toast_overlay.add_toast(toast)
 
     def translate_to(self, text):
-        text = re.sub(r'[^A-Za-z0-9 \n]+', '', text)
-
         words = text.lower().replace('\n', ' ').split(' ')
         output = ''
 
         for outer_index, word in enumerate(words):
             for inner_index, letter in enumerate(word):
-                output += morse_table[letter]
+                try:
+                    output += morse_table[letter]
+                except:
+                    output += '#'
 
                 if (inner_index + 1 != len(word)):
                     output += ' '
@@ -173,7 +194,6 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
 
     def translate_from(self, text):
-        text = re.sub(r'[^\-\.0-9 \n/]+', '', text)
         words = text.replace('\n', '/').split('/')
         output = ''
         
@@ -187,6 +207,8 @@ class TelegraphWindow(Adw.ApplicationWindow):
                 for key, value in morse_table.items():
                     if letter == value:
                         output += key
+                if letter == '#':
+                    output += '#'
 
             output += ' '
 
