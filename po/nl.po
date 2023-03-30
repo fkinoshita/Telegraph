@@ -103,3 +103,8 @@ msgstr "Een morsevertaler voor GNOME"
 #: data/io.github.fkinoshita.Telegraph.desktop.in.in:13
 msgid "morse;code;translator;translate;"
 msgstr "morse;code;vertaler;vertaal;"
+
+#. Add your name to the translator credits list
+#: data/about_dialog.ui.in:10
+msgid "translator-credits"
+msgstr "Heimen Stoffels <vistausss@fastmail.com>"
