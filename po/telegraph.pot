@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-30 02:58-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/ui/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: data/ui/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr ""
+
+#: data/ui/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#: data/ui/window.ui:29
+msgid "Main Menu"
+msgstr ""
+
+#: data/ui/window.ui:49
+msgid "Message"
+msgstr ""
+
+#: data/ui/window.ui:95 data/ui/window.ui:159
+msgid "Copy to clipboard"
+msgstr ""
+
+#: data/ui/window.ui:112
+msgid "Morse Code"
+msgstr ""
+
+#: data/ui/window.ui:189
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: data/ui/window.ui:194
+msgid "_About Telegraph"
+msgstr ""
+
+#: src/window.py:173
+msgid "Message Copied"
+msgstr ""
+
+#: src/window.py:176
+msgid "Morse Code Copied"
+msgstr ""
