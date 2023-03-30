@@ -1,0 +1,105 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Heimen Stoffels <vistausss@fastmail.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-30 03:38-0300\n"
+"PO-Revision-Date: 2023-03-30 17:46+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: data/ui/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Algemeen"
+
+#: data/ui/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Sneltoetsen tonen"
+
+#: data/ui/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Afsluiten"
+
+#: data/ui/window.ui:29
+msgid "Main Menu"
+msgstr "Hoofdmenu"
+
+#: data/ui/window.ui:49
+msgid "Message"
+msgstr "Bericht"
+
+#: data/ui/window.ui:95 data/ui/window.ui:159
+msgid "Copy to clipboard"
+msgstr "Kopiëren naar klembord"
+
+#: data/ui/window.ui:112
+msgid "Morse Code"
+msgstr "Morsecode"
+
+#: data/ui/window.ui:189
+msgid "_Keyboard Shortcuts"
+msgstr "_Sneltoetsen"
+
+#: data/ui/window.ui:194
+msgid "_About Telegraph"
+msgstr "Over Telegr_aph"
+
+#: src/window.py:173
+msgid "Message Copied"
+msgstr "Het bericht is gekopieerd"
+
+#: src/window.py:176
+msgid "Morse Code Copied"
+msgstr "De morsecode is gekopieerd"
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:6
+msgid "@NAME@"
+msgstr ""
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:7
+msgid "Felipe Kinoshita"
+msgstr ""
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:11
+msgid "Write and decode morse"
+msgstr "Schrijf in en ontrafel morsecode"
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:13
+msgid ""
+"Telegraph is a simple Morse translator, start typing your message to see the "
+"resulting Morse code and vice versa."
+msgstr ""
+"Telegraph is een eenvoudige morsevertaler. Typ een bericht om om te zetten "
+"in morsecode en vice-versa."
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:34
+msgid "Main window"
+msgstr "Hoofdvenster"
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:4
+msgid "Telegraph"
+msgstr "Telegraph"
+
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:5
+msgid "A Morse translator for GNOME"
+msgstr "Een morsevertaler voor GNOME"
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:13
+msgid "morse;code;translator;translate;"
+msgstr "morse;code;vertaler;vertaal;"
