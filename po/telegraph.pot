@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-30 02:58-0300\n"
+"POT-Creation-Date: 2023-03-30 03:38-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,4 +62,42 @@ msgstr ""
 
 #: src/window.py:176
 msgid "Morse Code Copied"
+msgstr ""
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:6
+msgid "@NAME@"
+msgstr ""
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:7
+msgid "Felipe Kinoshita"
+msgstr ""
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:11
+msgid "Write and decode morse"
+msgstr ""
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:13
+msgid ""
+"Telegraph is a simple Morse translator, start typing your message to see the "
+"resulting Morse code and vice versa."
+msgstr ""
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:34
+msgid "Main window"
+msgstr ""
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:4
+msgid "Telegraph"
+msgstr ""
+
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:5
+msgid "A Morse translator for GNOME"
+msgstr ""
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:13
+msgid "morse;code;translator;translate;"
 msgstr ""
