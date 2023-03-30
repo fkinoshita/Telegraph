@@ -14,7 +14,7 @@ project_name = 'Telegraph'
 package_url = 'https://github.com/fkinoshita/Telegraph'
 copyright = '© 2023 Felipe Kinoshita.'
 contributors = '\n'.join([
-    'Felipe Kinoshita',
+    'Felipe Kinoshita https://mastodon.social/@fkinoshita',
     'gregorni https://fosstodon.org/@gregorni',
     'axtlos https://axtlos.neocities.org'
 ])
