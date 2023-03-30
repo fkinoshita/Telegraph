@@ -15,6 +15,7 @@ package_url = 'https://github.com/fkinoshita/Telegraph'
 copyright = '© 2023 Felipe Kinoshita.'
 contributors = '\n'.join([
     'Felipe Kinoshita',
+    'gregorni https://fosstodon.org/@gregorni',
     'axtlos https://axtlos.neocities.org'
 ])
 designers = '\n'.join([
