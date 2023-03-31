@@ -92,7 +92,7 @@
                               <object class="GtkButton" id="message_copy_button">
                                 <property name="sensitive">false</property>
                                 <property name="icon-name">edit-copy-symbolic</property>
-                                <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
+                                <property name="tooltip-text" translatable="yes">Copy to Clipboard</property>
                                 <property name="hexpand">true</property>
                                 <property name="halign">end</property>
                               </object>
@@ -156,7 +156,7 @@
                               <object class="GtkButton" id="morse_copy_button">
                                 <property name="sensitive">false</property>
                                 <property name="icon-name">edit-copy-symbolic</property>
-                                <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
+                                <property name="tooltip-text" translatable="yes">Copy to Clipboard</property>
                                 <property name="hexpand">true</property>
                                 <property name="halign">end</property>
                               </object>
