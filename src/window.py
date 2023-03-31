@@ -102,7 +102,7 @@ class TelegraphWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        self.set_size_request(350, 450)
+        self.set_size_request(320, 450)
 
         self.message_buffer = self.message_text_view.get_buffer()
         self.message_buffer.connect('changed', self.__on_input_changed);
