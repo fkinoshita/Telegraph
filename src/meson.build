@@ -21,6 +21,7 @@ configure_file(
 telegraph_sources = [
   '__init__.py',
   'main.py',
+  'application.py',
   'window.py',
 ]
 
