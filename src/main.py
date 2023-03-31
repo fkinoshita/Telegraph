@@ -38,7 +38,7 @@ class TelegraphApplication(Adw.Application):
         quit_action = Gio.SimpleAction.new("quit", None)
         quit_action.connect("activate", self.on_quit_action)
         self.add_action(quit_action)
-        self.set_accels_for_action("app.quit", ["<Control>q"])
+        self.set_accels_for_action("app.quit", ["<Control>q", "<Control>w"])
 
         self.create_action('about', self.on_about_action)
 
