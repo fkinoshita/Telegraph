@@ -171,10 +171,10 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
         if button == self.message_copy_button:
             output_buffer = self.message_text_view.get_buffer()
-            toast.set_title(_('Message Copied'))
+            toast.set_title(_('Message copied'))
         elif button == self.morse_copy_button:
             output_buffer = self.morse_text_view.get_buffer()
-            toast.set_title(_('Morse Code Copied'))
+            toast.set_title(_('Morse code copied'))
         (start, end) = output_buffer.get_bounds()
         output = output_buffer.get_text(start, end, False)
 
