@@ -1,6 +1,6 @@
 project(
   'telegraph',
-  version: '0.1.1',
+  version: '0.1.2',
   meson_version: '>= 0.59.0',
   license: 'GPL-3.0-only',
 )
