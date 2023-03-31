@@ -9,6 +9,7 @@
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
   <summary>Write and decode morse</summary>
+  <translation type="gettext">io.github.fkinoshita.Telegraph</translation>
 	<description>
 	  <p>
 	    Telegraph is a simple Morse translator, start typing your message to see
