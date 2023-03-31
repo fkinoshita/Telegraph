@@ -161,6 +161,7 @@ class TelegraphWindow(Adw.ApplicationWindow):
         else:
             self.morse_copy_button.set_sensitive(True)
 
+
     def __on_copy_button_clicked(self, button):
         self.copy(button)
 
@@ -183,6 +184,7 @@ class TelegraphWindow(Adw.ApplicationWindow):
         Gdk.Display.get_default().get_clipboard().set(output)
 
         self.toast_overlay.add_toast(toast)
+
 
     def translate_to(self, text):
         words = text.lower().replace('\n', ' ').split(' ')
