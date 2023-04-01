@@ -22,7 +22,7 @@ designers = '\n'.join([
   '',
 ])
 artists = '\n'.join([
-  'Brage Fuglseth',
+  'Brage Fuglseth https://bragefuglseth.dev/',
 ])
 
 dependency('gtk4', version: '>=4.9')
