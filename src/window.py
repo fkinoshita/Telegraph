@@ -68,9 +68,9 @@ morse_table = {
 class TelegraphWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'TelegraphWindow'
 
-    window_box = Gtk.Template.Child()
-
     toast_overlay = Gtk.Template.Child()
+
+    window_box = Gtk.Template.Child()
 
     message_group = Gtk.Template.Child()
     morse_group = Gtk.Template.Child()
@@ -116,29 +116,35 @@ class TelegraphWindow(Adw.ApplicationWindow):
             self.timeout_buffer -= 1
             self.updated_buffer = None if self.timeout_buffer == 0 else self.updated_buffer
             return
+
         (start, end) = input_buffer.get_bounds()
         text = input_buffer.get_text(start, end, False)
 
         if input_buffer == self.message_buffer:
             output_message = self.translate_to(text)
+
             self.timeout_buffer = 2
             self.updated_buffer = self.morse_buffer
             self.morse_buffer.set_text(output_message)
+
         elif input_buffer == self.morse_buffer:
             output_message = self.translate_from(text)
+
             self.timeout_buffer = 2
             self.updated_buffer = self.message_buffer
             self.message_buffer.set_text(output_message)
 
-
         (start, end) = self.morse_buffer.get_bounds()
         morse_output = self.morse_buffer.get_text(start, end, False)
+
         (start, end) = self.message_buffer.get_bounds()
         text_output = self.message_buffer.get_text(start, end, False)
+
         if len(text_output) == 0:
             self.message_copy_button.set_sensitive(False)
         else:
             self.message_copy_button.set_sensitive(True)
+
         if len(morse_output) == 0:
             self.morse_copy_button.set_sensitive(False)
         else:
@@ -155,9 +161,11 @@ class TelegraphWindow(Adw.ApplicationWindow):
         if button == self.message_copy_button:
             output_buffer = self.message_text_view.get_buffer()
             toast.set_title(_('Message copied'))
+
         elif button == self.morse_copy_button:
             output_buffer = self.morse_text_view.get_buffer()
             toast.set_title(_('Morse code copied'))
+
         (start, end) = output_buffer.get_bounds()
         output = output_buffer.get_text(start, end, False)
 
@@ -210,4 +218,3 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
         return output
 
-    
