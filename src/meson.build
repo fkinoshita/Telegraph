@@ -2,6 +2,7 @@ moduledir = join_paths(DATA_DIR, 'telegraph')
 
 conf = configuration_data()
 
+conf.set('VERSION', version)
 conf.set('APPID', application_id)
 conf.set('GETTEXT_PACKAGE', meson.project_name())
 conf.set('LOCALE_DIR', join_paths(get_option('prefix'), get_option('datadir'), 'locale'))
