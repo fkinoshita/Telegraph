@@ -7,7 +7,7 @@
   <developer_name translatable="no">Felipe Kinoshita</developer_name>
   <update_contact>kinofhek@gmail.com</update_contact>
 	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
+	<project_license>GPL-3.0-only</project_license>
   <summary>Write and decode morse</summary>
   <translation type="gettext">io.github.fkinoshita.Telegraph</translation>
 	<description>
