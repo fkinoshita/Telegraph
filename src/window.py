@@ -88,13 +88,13 @@ class TelegraphWindow(Adw.ApplicationWindow):
         self.set_size_request(320, 450)
 
         self.message_buffer = self.message_text_view.get_buffer()
-        self.message_buffer.connect('changed', self.__on_input_changed);
+        self.message_buffer.connect('changed', self.__on_input_changed)
 
         self.morse_buffer = self.morse_text_view.get_buffer()
-        self.morse_buffer.connect('changed', self.__on_input_changed);
+        self.morse_buffer.connect('changed', self.__on_input_changed)
 
         self.message_copy_button.connect('clicked', self.__on_copy_button_clicked)
-        self.morse_copy_button.connect('clicked', self.__on_copy_button_clicked);
+        self.morse_copy_button.connect('clicked', self.__on_copy_button_clicked)
 
         self.updated_buffer = None
         self.timeout_buffer = 0
