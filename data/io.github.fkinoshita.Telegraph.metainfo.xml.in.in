@@ -54,9 +54,9 @@
     <release version="0.1.1" date="2023-03-29">
       <description>
         <ul>
-          <li>Remove explicit modes, you can now start typing on either text views</li>
-          <li>Layout is now responsive</li>
-          <li>Support for new characters</li>
+          <li>Remove explicit modes, you can now start typing on either text views (axtloss)</li>
+          <li>Layout is now responsive (gregorni)</li>
+          <li>Support for new characters (gregorni)</li>
           <li>Small quality-of-life improvements</li>
         </ul>
       </description>
