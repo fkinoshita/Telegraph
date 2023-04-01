@@ -1,0 +1,110 @@
+# Occitan translation file.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Quentin PAGÈS, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-30 18:15-0300\n"
+"PO-Revision-Date: 2023-03-31 22:50+0200\n"
+"Last-Translator: Quentin PAGÈS\n"
+"Language-Team: \n"
+"Language: oc\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: data/ui/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "General"
+
+#: data/ui/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Afichar los acorchis"
+
+#: data/ui/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Quitar"
+
+#: data/ui/window.ui:29
+msgid "Main Menu"
+msgstr "Menú principal"
+
+#: data/ui/window.ui:49
+msgid "Message"
+msgstr "Messatge"
+
+#: data/ui/window.ui:95 data/ui/window.ui:159
+msgid "Copy to clipboard"
+msgstr "Copiar al quicha-papièrs"
+
+#: data/ui/window.ui:112
+msgid "Morse Code"
+msgstr "Còdi Morse"
+
+#: data/ui/window.ui:189
+msgid "_Keyboard Shortcuts"
+msgstr "_Acorchis de clavièr"
+
+#: data/ui/window.ui:194
+msgid "_About Telegraph"
+msgstr "_A prepaus de Telegraph"
+
+#: src/window.py:173
+msgid "Message Copied"
+msgstr "Messatge copiat"
+
+#: src/window.py:176
+msgid "Morse Code Copied"
+msgstr "Còdi Morse copiat"
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:6
+msgid "@NAME@"
+msgstr ""
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:7
+msgid "Felipe Kinoshita"
+msgstr "Felipe Kinoshita"
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:11
+msgid "Write and decode morse"
+msgstr "Escriure e descodar lo Morse"
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:13
+msgid ""
+"Telegraph is a simple Morse translator, start typing your message to see the "
+"resulting Morse code and vice versa."
+msgstr ""
+"Telegraph es un simple traductor Morse, començatz de picar vòstre messatge "
+"per veire lo còdi Morse correspondent e invèrsament."
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:34
+msgid "Main window"
+msgstr "Fenèstra principala"
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:4
+msgid "Telegraph"
+msgstr ""
+
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:5
+msgid "A Morse translator for GNOME"
+msgstr "Un traductor de Morse per GNOME"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:13
+msgid "morse;code;translator;translate;"
+msgstr "morse;còdi;traductor;traduire;tradusir;"
+
+#. Add your name to the translator credits list
+#: data/about_dialog.ui.in:10
+msgid "translator-credits"
+msgstr "Quentin PAGÈS"
