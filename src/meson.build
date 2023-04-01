@@ -12,6 +12,14 @@ conf.set('DATA_DIR', DATA_DIR)
 conf.set('APPID', application_id)
 
 configure_file(
+  input: 'const.py.in',
+  output: 'const.py',
+  configuration: conf,
+  install: true,
+  install_dir: get_option('bindir')
+)
+
+configure_file(
   input: 'telegraph.in',
   output: 'telegraph',
   configuration: conf,
