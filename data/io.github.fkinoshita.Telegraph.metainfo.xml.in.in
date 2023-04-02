@@ -7,8 +7,9 @@
   <developer_name translatable="no">Felipe Kinoshita</developer_name>
   <update_contact>kinofhek@gmail.com</update_contact>
 	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
+	<project_license>GPL-3.0-only</project_license>
   <summary>Write and decode morse</summary>
+  <translation type="gettext">io.github.fkinoshita.Telegraph</translation>
 	<description>
 	  <p>
 	    Telegraph is a simple Morse translator, start typing your message to see
@@ -41,12 +42,30 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="0.1.3" date="2023-04-01">
+      <description>
+        <ul>
+          <li>Ctrl+W now closes the window</li>
+          <li>Add French translations (Amerey)</li>
+          <li>Add Czech translations (rene-coty)</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.2" date="2023-03-31">
+      <description>
+        <ul>
+          <li>Small user interface improvements</li>
+          <li>Use nicer colors for GNOME Software carousel tile</li>
+          <li>Add Dutch translations (Heimen Stoffels)</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.1" date="2023-03-29">
       <description>
         <ul>
-          <li>Remove explicit modes, you can now start typing on either text views</li>
-          <li>Layout is now responsive</li>
-          <li>Support for new characters</li>
+          <li>Remove explicit modes, you can now start typing on either text views (axtloss)</li>
+          <li>Layout is now responsive (gregorni)</li>
+          <li>Support for new characters (gregorni)</li>
           <li>Small quality-of-life improvements</li>
         </ul>
       </description>

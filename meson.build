@@ -1,6 +1,6 @@
 project(
   'telegraph',
-  version: '0.1.1',
+  version: '0.1.4',
   meson_version: '>= 0.59.0',
   license: 'GPL-3.0-only',
 )
@@ -14,14 +14,15 @@ project_name = 'Telegraph'
 package_url = 'https://github.com/fkinoshita/Telegraph'
 copyright = '© 2023 Felipe Kinoshita.'
 contributors = '\n'.join([
-    'Felipe Kinoshita',
+    'Felipe Kinoshita https://mastodon.social/@fkinoshita',
+    'gregorni https://fosstodon.org/@gregorni',
     'axtlos https://axtlos.neocities.org'
 ])
 designers = '\n'.join([
   '',
 ])
 artists = '\n'.join([
-  'Brage Fuglseth',
+  'Brage Fuglseth https://bragefuglseth.dev/',
 ])
 
 dependency('gtk4', version: '>=4.9')
