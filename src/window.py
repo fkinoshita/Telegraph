@@ -3,7 +3,7 @@
 import re
 from gettext import gettext as _
 
-from gi.repository import Adw, Gtk, Gdk
+from gi.repository import Adw, Gtk, Gdk, Gio, GLib
 
 morse_table = {
     'a': '.-',
@@ -85,6 +85,12 @@ class TelegraphWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
+        self.settings = Gio.Settings.new(Gio.Application.get_default().get_application_id())
+
+        # Set saved window size
+        size = Gio.Settings.get_value(self.settings, 'window-size')
+        self.set_default_size(size[0], size[1])
+
         self.set_size_request(320, 450)
 
         self.message_buffer = self.message_text_view.get_buffer()
@@ -103,6 +109,11 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
 
     def do_size_allocate(self, width, height, baseline):
+        # Save window size
+        size = [width, height]
+        size = GLib.Variant('ai', list(size))
+        Gio.Settings.set_value(self.settings, 'window-size', size)
+
         if width < 680:
             self.window_box.props.orientation = Gtk.Orientation.VERTICAL
         else:
