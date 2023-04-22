@@ -7,6 +7,10 @@ the resulting Morse code and vice versa.
 
 ![screenshot](/data/screenshots/telegraph.png)
 
+## Installation
+
+The recommended way to install Telegraph is from [Flathub](https://flathub.org)!
+
 <a href='https://flathub.org/apps/details/io.github.fkinoshita.Telegraph'><img width='180' height='60' alt='Download on Flathub' src='https://dl.flathub.org/assets/badges/flathub-badge-en.png'/></a>
 
 ## Code of conduct
