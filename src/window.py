@@ -105,6 +105,7 @@ class TelegraphWindow(Adw.ApplicationWindow):
         self.updated_buffer = None
         self.timeout_buffer = 0
 
+        self.message_text_view.get_buffer().set_text("SOS")
         self.message_text_view.grab_focus()
 
 
