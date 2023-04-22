@@ -1,5 +1,7 @@
 # Telegraph
 
+[![](https://circle.gnome.org/assets/button/badge.svg)](https://apps.gnome.org/app/io.github.fkinoshita.Telegraph/)
+
 Telegraph is a simple Morse translator, start typing your message to see
 the resulting Morse code and vice versa.
 
