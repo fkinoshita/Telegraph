@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Eren İnce <erenince@proton.me>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-30 18:15-0300\n"
+"PO-Revision-Date: 2023-04-22 12:00+ZONE\n"
+"Last-Translator: Eren İnce <erenince@proton.me>\n"
+"Language-Team: Turkish <LL@li.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/ui/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Genel"
+
+#: data/ui/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Kısayolları göster"
+
+#: data/ui/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Çık"
+
+#: data/ui/window.ui:29
+msgid "Main Menu"
+msgstr "Ana Menü"
+
+#: data/ui/window.ui:49
+msgid "Message"
+msgstr "Mesaj"
+
+#: data/ui/window.ui:95 data/ui/window.ui:159
+msgid "Copy to clipboard"
+msgstr "Panoya kopyala"
+
+#: data/ui/window.ui:112
+msgid "Morse Code"
+msgstr "Mors Alfabesi"
+
+#: data/ui/window.ui:189
+msgid "_Keyboard Shortcuts"
+msgstr "_Klavye Kısayolları"
+
+#: data/ui/window.ui:194
+msgid "_About Telegraph"
+msgstr "_Telegraf Hakkında"
+
+#: src/window.py:173
+msgid "Message Copied"
+msgstr "Mesaj Kopyalandı"
+
+#: src/window.py:176
+msgid "Morse Code Copied"
+msgstr "Mors Alfabesi Kopyalandı"
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:6
+msgid "@NAME@"
+msgstr "@NAME@"
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:7
+msgid "Felipe Kinoshita"
+msgstr "Felipe Kinoshita"
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:11
+msgid "Write and decode morse"
+msgstr "Mors yazın ve deşifre edin"
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:13
+msgid ""
+"Telegraph is a simple Morse translator, start typing your message to see the "
+"resulting Morse code and vice versa."
+msgstr ""
+"Telegraph basit bir Mors tercümanıdır,"
+"sonuçta ortaya çıkan Mors alfabesini görmek için mesajınızı yazmaya başlayın ve bunun tersini de yapın."
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:34
+msgid "Main window"
+msgstr "Ana pencere"
+
+#. TRANSLATORS: Don't translate
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:4
+msgid "Telegraph"
+msgstr "Telegraph"
+
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:5
+msgid "A Morse translator for GNOME"
+msgstr "GNOME için bir Mors çeviricisi"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:13
+msgid "morse;code;translator;translate;"
+msgstr "morse;code;translator;translate;"
+
+#. Add your name to the translator credits list
+#: data/about_dialog.ui.in:10
+msgid "translator-credits"
+msgstr "Eren İnce"
