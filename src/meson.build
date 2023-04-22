@@ -32,6 +32,7 @@ telegraph_sources = [
   'main.py',
   'application.py',
   'window.py',
+  'utils.py',
 ]
 
 install_data(telegraph_sources, install_dir: moduledir)

@@ -5,64 +5,7 @@ from gettext import gettext as _
 
 from gi.repository import Adw, Gtk, Gdk, Gio, GLib
 
-morse_table = {
-    'a': '.-',
-    'b': '-...',
-    'c': '-.-.',
-    'd': '-..',
-    'e': '.',
-    'f': '..-.',
-    'g': '--.',
-    'h': '....',
-    'i': '..',
-    'j': '.---',
-    'k': '-.-',
-    'l': '.-..',
-    'm': '--',
-    'n': '-.',
-    'o': '---',
-    'p': '.--.',
-    'q': '--.-',
-    'r': '.-.',
-    's': '...',
-    't': '-',
-    'u': '..-',
-    'v': '...-',
-    'w': '.--',
-    'x': '-..-',
-    'y': '-.--',
-    'z': '--..',
-    '1': '.----',
-    '2': '..---',
-    '3': '...--',
-    '4': '....-',
-    '5': '.....',
-    '6': '-....',
-    '7': '--...',
-    '8': '---..',
-    '9': '----.',
-    '0': '-----',
-    '.': '.-.-.-',
-    ',': '--..--',
-    '?': '..--..',
-    '\'': '.----.',
-    '!': '-.-.--',
-    '/': '-..-.',
-    '(': '-.--.',
-    ')': '-.--.-',
-    '&': '.-...',
-    ':': '---...',
-    ';': '-.-.-.',
-    '=': '-...-',
-    '+': '.-.-.',
-    '-': '-....-',
-    '_': '..--.-',
-    '"': '.-..-.',
-    '$': '...-..-',
-    '@': '.--.-.',
-    '¿': '..-.-',
-    '¡': '--...-',
-}
+from .utils import Utils
 
 @Gtk.Template(resource_path='/io/github/fkinoshita/Telegraph/ui/window.ui')
 class TelegraphWindow(Adw.ApplicationWindow):
@@ -133,14 +76,14 @@ class TelegraphWindow(Adw.ApplicationWindow):
         text = input_buffer.get_text(start, end, False)
 
         if input_buffer == self.message_buffer:
-            output_message = self.translate_to(text)
+            output_message = Utils.translate_to(text)
 
             self.timeout_buffer = 2
             self.updated_buffer = self.morse_buffer
             self.morse_buffer.set_text(output_message)
 
         elif input_buffer == self.morse_buffer:
-            output_message = self.translate_from(text)
+            output_message = Utils.translate_from(text)
 
             self.timeout_buffer = 2
             self.updated_buffer = self.message_buffer
@@ -187,46 +130,4 @@ class TelegraphWindow(Adw.ApplicationWindow):
         Gdk.Display.get_default().get_clipboard().set(output)
 
         self.toast_overlay.add_toast(toast)
-
-
-    def translate_to(self, text):
-        words = text.lower().replace('\n', ' ').split(' ')
-        output = ''
-
-        for outer_index, word in enumerate(words):
-            for inner_index, letter in enumerate(word):
-                try:
-                    output += morse_table[letter]
-                except:
-                    output += '#'
-
-                if (inner_index + 1 != len(word)):
-                    output += ' '
-
-            if (outer_index + 1 != len(words)):
-                output += ' / '
-
-        return output
-
-
-    def translate_from(self, text):
-        words = text.replace('\n', '/').split('/')
-        output = ''
-        
-        for outer_index, word in enumerate(words):
-            word.strip()
-
-            letters = word.split(' ')
-            letters = list(filter(None, letters))
-
-            for inner_index, letter in enumerate(letters):
-                for key, value in morse_table.items():
-                    if letter == value:
-                        output += key
-                if letter == '#':
-                    output += '#'
-
-            output += ' '
-
-        return output
 
