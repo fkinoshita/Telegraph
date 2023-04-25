@@ -14,7 +14,7 @@ msgstr ""
 "Language-Team: Turkish <LL@li.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/ui/gtk/help-overlay.ui:11
