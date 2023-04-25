@@ -42,6 +42,16 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="0.1.5" date="2023-04-24">
+      <description>
+        <p>This is the first release after Telegraph entered GNOME Circle!</p>
+        <ul>
+          <li>Start text views with the "SOS" text, this makes it easier to understand that users should edit the text views.</li>
+          <li>Add Brazilian Portuguese translations</li>
+          <li>Add Turkish translations (ernince)</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.4" date="2023-04-07">
       <description>
         <ul>
