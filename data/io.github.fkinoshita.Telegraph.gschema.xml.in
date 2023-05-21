@@ -4,7 +4,13 @@
     <key type="ai" name="window-size">
       <default>[350, 500]</default>
       <summary>Window Size</summary>
-      <description>Remember the window size</description>
+      <summary xml:lang="hr">Veličina prozora</summary>
+      <description>
+      	<p>Remember the window size
+      	</p>
+        <p xml:lang="hr">Zapamti veličinu prozora
+        </p> 
+	    </description>
     </key>
 	</schema>
 </schemalist>

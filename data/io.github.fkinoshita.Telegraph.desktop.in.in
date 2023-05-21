@@ -2,6 +2,7 @@
 # Translators: Secrets is the app name, do not translate
 Name=Telegraph
 Comment=A Morse translator for GNOME
+Comment[hr]=Prevoditelj Morseovog koda za GNOME
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=@ICON@
 Exec=telegraph
