@@ -42,6 +42,15 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="0.1.6" date="2023-05-25">
+      <description>
+        <ul>
+          <li>Improve undershoot styles (daudix-UFO)</li>
+          <li>Add Russian translations (daudix-UFO)</li>
+          <li>Update Turkish translations (sabriunal)</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.5" date="2023-04-24">
       <description>
         <p>This is the first release after Telegraph entered GNOME Circle!</p>
