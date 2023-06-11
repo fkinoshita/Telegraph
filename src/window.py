@@ -20,6 +20,8 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
     message_text_view = Gtk.Template.Child()
     morse_text_view = Gtk.Template.Child()
+    message_placeholder = Gtk.Template.Child()
+    morse_placeholder = Gtk.Template.Child()
 
     message_copy_button = Gtk.Template.Child()
     morse_copy_button = Gtk.Template.Child()
@@ -74,6 +76,13 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
         (start, end) = input_buffer.get_bounds()
         text = input_buffer.get_text(start, end, False)
+
+        if len(text) < 1:
+            self.message_placeholder.set_visible(True)
+            self.morse_placeholder.set_visible(True)
+        else:
+            self.message_placeholder.set_visible(False)
+            self.morse_placeholder.set_visible(False)
 
         if input_buffer == self.message_buffer:
             output_message = Utils.translate_to(text)
