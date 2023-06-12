@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="telegraph">
 	<schema id="io.github.fkinoshita.Telegraph" path="/io/github/fkinoshita/Telegraph/">
+    <key type="ai" name="window-size">
+      <default>[350, 500]</default>
+      <summary>Window Size</summary>
+      <description>Remember the window size</description>
+    </key>
 	</schema>
 </schemalist>

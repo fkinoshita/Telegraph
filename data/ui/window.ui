@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <template class="TelegraphWindow" parent="AdwApplicationWindow">
-    <property name="title">Telegraph</property>
+    <property name="title" translatable="yes">Telegraph</property>
     <property name="default-width">350</property>
     <property name="default-height">500</property>
 
@@ -71,10 +71,25 @@
                             </style>
 
                             <child>
-                              <object class="GtkTextView" id="message_text_view">
-                                <property name="wrap-mode">GTK_WRAP_WORD_CHAR</property>
-                                <property name="hexpand">true</property>
-                                <property name="vexpand">true</property>
+                              <object class="GtkOverlay">
+
+                              <property name="child">
+                                <object class="GtkTextView" id="message_text_view">
+                                  <property name="wrap-mode">GTK_WRAP_WORD_CHAR</property>
+                                  <property name="hexpand">true</property>
+                                  <property name="vexpand">true</property>
+                                </object>
+                              </property>
+
+                              <child type="overlay">
+                                <object class="GtkLabel" id="message_placeholder">
+                                  <property name="label" translatable="yes">Insert your message here…</property>
+                                  <property name="halign">start</property>
+                                  <property name="valign">start</property>
+                                  <property name="sensitive">false</property>
+                                </object>
+                              </child>
+
                               </object>
                             </child>
 
@@ -134,11 +149,26 @@
                             </style>
 
                             <child>
-                              <object class="GtkTextView" id="morse_text_view">
-                                <property name="wrap-mode">GTK_WRAP_CHAR</property>
-                                <property name="monospace">true</property>
-                                <property name="hexpand">true</property>
-                                <property name="vexpand">true</property>
+                              <object class="GtkOverlay">
+
+                                <property name="child">
+                                  <object class="GtkTextView" id="morse_text_view">
+                                    <property name="wrap-mode">GTK_WRAP_CHAR</property>
+                                    <property name="monospace">true</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="vexpand">true</property>
+                                  </object>
+                                </property>
+
+                                <child type="overlay">
+                                  <object class="GtkLabel" id="morse_placeholder">
+                                    <property name="label" translatable="yes">Insert morse code here…</property>
+                                    <property name="halign">start</property>
+                                    <property name="valign">start</property>
+                                    <property name="sensitive">false</property>
+                                  </object>
+                                </child>
+
                               </object>
                             </child>
 

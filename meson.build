@@ -1,6 +1,6 @@
 project(
   'telegraph',
-  version: '0.1.3',
+  version: '0.1.6',
   meson_version: '>= 0.59.0',
   license: 'GPL-3.0-only',
 )
@@ -22,7 +22,7 @@ designers = '\n'.join([
   '',
 ])
 artists = '\n'.join([
-  'Brage Fuglseth',
+  'Brage Fuglseth https://bragefuglseth.dev/',
 ])
 
 dependency('gtk4', version: '>=4.9')
