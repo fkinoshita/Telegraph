@@ -22,7 +22,6 @@
   </a>
 </p>
 
-
 <p align="center">
   <img src="/data/screenshots/telegraph.png" alt="Preview"/>
 </p>
@@ -30,21 +29,21 @@
 Telegraph is a simple Morse translator, start typing your message to see
 the resulting Morse code and vice versa.
 
-
-
 ## Installation
 
 Install Telegraph from Flathub by issuing
+
 ```shell
-$ flatpak install io.github.fkinoshita.Telegraph
+flatpak install io.github.fkinoshita.Telegraph
 ```
+
 Telegraph can be kept up to date by issuing flatpak's update command like
+
 ```shell
-$ flatpak update
+flatpak update
 ```
 
 ## Code of conduct
 
 Telegraph follows the GNOME project [Code of Conduct](./code-of-conduct.md). All
 communications in project spaces, such as the issue tracker are expected to follow it.
-
