@@ -42,6 +42,17 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="0.1.7" date="2023-06-17">
+      <description>
+        <p>This is minor release of Telegraph brings some improvements nicer looking:</p>
+        <ul>
+          <li>Remove margins from text views</li>
+          <li>Overlay copy buttons on top of text views, making room for more text</li>
+        </ul>
+        <p>Telegraph is made possible by volunteer developers, designers, and translators. Thank you for your contributions!</p>
+        <p>Feel free to report issues and ask for new features.</p>
+      </description>
+    </release>
     <release version="0.1.6" date="2023-05-25">
       <description>
         <ul>

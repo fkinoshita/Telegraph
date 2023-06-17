@@ -60,5 +60,16 @@ class TelegraphApplication(Adw.Application):
         )
         about_dialog = builder.get_object("about_dialog")
         about_dialog.set_transient_for(self.props.active_window)
+
+        about_dialog.set_release_notes(
+        """<p>This is minor release of Telegraph makes it nicer looking:</p>
+           <ul>
+             <li>Remove margins from text views</li>
+             <li>Overlay copy buttons on top of text views, making room for more text</li>
+           </ul>
+           <p>Telegraph is made possible by volunteer developers, designers, and translators. Thank you for your contributions!</p>
+           <p>Feel free to report issues and ask for new features.</p>
+        """)
+
         about_dialog.present()
 
