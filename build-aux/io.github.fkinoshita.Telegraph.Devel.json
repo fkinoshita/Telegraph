@@ -1,5 +1,5 @@
 {
-    "id" : "io.github.fkinoshita.Telegraph",
+    "id" : "io.github.fkinoshita.Telegraph.Devel",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
@@ -26,11 +26,13 @@
             "name" : "telegraph",
             "builddir" : true,
             "buildsystem" : "meson",
+			"config-opts" : [
+				"-Dprofile=development"
+			],
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/fkinoshita/Telegraph.git",
-                    "branch" : "main"
+                    "type" : "dir",
+					"path" : ".."
                 }
             ]
         }

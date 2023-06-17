@@ -8,10 +8,8 @@ import locale
 import gettext
 
 VERSION = '@VERSION@'
-APP_ID = "@APPID@"
 GETTEXT_PACKAGE = "@GETTEXT_PACKAGE@"
 LOCALEDIR = "@LOCALE_DIR@"
-NAME = "@NAME@"
 PKGDATADIR = "@DATA_DIR@"
 
 sys.path.insert(1, PKGDATADIR)

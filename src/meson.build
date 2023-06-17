@@ -1,23 +1,26 @@
 moduledir = join_paths(DATA_DIR, 'telegraph')
 
-conf = configuration_data()
+const = configuration_data()
 
-conf.set('VERSION', version)
-conf.set('APPID', application_id)
-conf.set('GETTEXT_PACKAGE', meson.project_name())
-conf.set('LOCALE_DIR', join_paths(get_option('prefix'), get_option('datadir'), 'locale'))
-conf.set('NAME', project_name)
-conf.set('PYTHON', python.find_installation('python3').path())
-conf.set('DATA_DIR', DATA_DIR)
-conf.set('APPID', application_id)
+const.set('APPID', application_id)
+const.set('PROFILE', profile)
 
 configure_file(
   input: 'const.py.in',
   output: 'const.py',
-  configuration: conf,
+  configuration: const,
   install: true,
-  install_dir: get_option('bindir')
+  install_dir: moduledir
 )
+
+conf = configuration_data()
+
+conf.set('VERSION', version)
+conf.set('GETTEXT_PACKAGE', meson.project_name())
+conf.set('LOCALE_DIR', join_paths(get_option('prefix'), get_option('datadir'), 'locale'))
+conf.set('PYTHON', python.find_installation('python3').full_path())
+conf.set('DATA_DIR', DATA_DIR)
+conf.set('APPID', application_id)
 
 configure_file(
   input: 'telegraph.in',

@@ -9,7 +9,7 @@ i18n = import('i18n')
 python = import('python')
 gnome = import('gnome')
 
-project_id = 'io.github.fkinoshita.Telegraph'
+base_id = 'io.github.fkinoshita.Telegraph'
 project_name = 'Telegraph'
 package_url = 'https://github.com/fkinoshita/Telegraph'
 copyright = '© 2023 Felipe Kinoshita.'
@@ -30,8 +30,19 @@ dependency('libadwaita-1', version: '>=1.2')
 
 DATA_DIR = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
 
-application_id = project_id
-version = meson.project_version()
+# Profiles
+if get_option('profile') == 'development'
+    profile = 'Devel'
+    application_id = '@0@.@1@'.format(base_id, profile)
+
+    find_program('git')
+    rev_txt = run_command('git', 'rev-parse', '--short', 'HEAD').stdout().strip()
+    version = meson.project_version() + '-' + rev_txt
+else
+    application_id = base_id
+    profile = 'Default'
+    version = meson.project_version()
+endif
 
 top_source_dir = meson.current_source_dir()
 gettext_package = meson.project_name()

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="telegraph">
-	<schema id="io.github.fkinoshita.Telegraph" path="/io/github/fkinoshita/Telegraph/">
+	<schema id="@APP_ID@" path="/io/github/fkinoshita/Telegraph/">
     <key type="ai" name="window-size">
       <default>[415, 500]</default>
       <summary>Window Size</summary>

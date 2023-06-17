@@ -5,6 +5,7 @@ from gettext import gettext as _
 
 from gi.repository import Adw, Gtk, Gdk, Gio, GLib
 
+from .const import PROFILE
 from .utils import Utils
 
 @Gtk.Template(resource_path='/io/github/fkinoshita/Telegraph/ui/window.ui')
@@ -27,6 +28,9 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+        if PROFILE == 'Devel':
+            self.add_css_class('devel')
 
         self.settings = Gio.Settings.new(Gio.Application.get_default().get_application_id())
 

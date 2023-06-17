@@ -8,13 +8,14 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Adw, Gtk, Gio
 
+from .const import APP_ID
 from .window import TelegraphWindow
 
 
 class TelegraphApplication(Adw.Application):
     def __init__(self):
         super().__init__(
-            application_id='io.github.fkinoshita.Telegraph',
+            application_id=APP_ID,
             flags=Gio.ApplicationFlags.FLAGS_NONE
         )
 

@@ -27,7 +27,7 @@ gschema_conf = configuration_data()
 gschema_conf.set('APP_ID', application_id)
 gschema_conf.set('GETTEXT_PACKAGE', gettext_package)
 configure_file(
-    input: '@0@.gschema.xml.in'.format(project_id),
+    input: '@0@.gschema.xml.in'.format(base_id),
     output: '@0@.gschema.xml'.format(application_id),
     configuration: gschema_conf,
     install: true,
