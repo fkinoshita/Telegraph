@@ -16,7 +16,7 @@
   <maintainer>
     <foaf:Person>
       <foaf:name>Felipe Kinoshita</foaf:name>
-      <foaf:mbox rdf:resource="mailto:kinofhek@gmail.com" />
+      <foaf:mbox rdf:resource="mailto:fkinoshita@gnome.org" />
       <foaf:account>
         <foaf:OnlineAccount>
           <foaf:accountServiceHomepage rdf:resource="https://github.com"/>
