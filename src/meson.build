@@ -4,6 +4,7 @@ const = configuration_data()
 
 const.set('APPID', application_id)
 const.set('PROFILE', profile)
+const.set('PYTHON', python.find_installation('python3').full_path())
 
 configure_file(
   input: 'const.py.in',
