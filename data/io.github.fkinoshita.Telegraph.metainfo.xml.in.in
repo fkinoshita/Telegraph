@@ -9,12 +9,16 @@
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-only</project_license>
   <summary>Write and decode morse</summary>
+  <summary xml:lang="hr">Piši i dekodiraj Morseov kod</summary>
   <translation type="gettext">io.github.fkinoshita.Telegraph</translation>
 	<description>
 	  <p>
 	    Telegraph is a simple Morse translator, start typing your message to see
 	    the resulting Morse code and vice versa.
 	  </p>
+	  <p xml:lang="hr">
+	    Telegraph je jednostavan prevoditelj Morseov koda. Upišite svoju poruku da biste vidjeli rezultirajući Morseov kod i obratno.
+	  </p> 
 	</description>
   <requires>
     <display_length compare="ge">350</display_length>
