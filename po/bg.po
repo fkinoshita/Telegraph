@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# Bulgarian translation for Telegraph.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Delyan Tomov <iirumamiu@protonmail.com>, 2023.
