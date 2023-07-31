@@ -30,11 +30,11 @@ class TelegraphWindow(Adw.ApplicationWindow):
         if PROFILE == 'Devel':
             self.add_css_class('devel')
 
+        self.connect('unrealize', self.save_settings)
+
         self.settings = Gio.Settings.new(Gio.Application.get_default().get_application_id())
 
-        #Set saved window size
-        size = Gio.Settings.get_value(self.settings, 'window-size')
-        self.set_default_size(size[0], size[1])
+        self.load_settings()
 
         self.set_size_request(320, 450)
 
@@ -118,4 +118,16 @@ class TelegraphWindow(Adw.ApplicationWindow):
         Gdk.Display.get_default().get_clipboard().set(output)
 
         self.toast_overlay.add_toast(toast)
+
+
+    def save_settings(self, *args, **kwargs):
+        width, height = self.get_default_size()
+        size = [width, height]
+        size = GLib.Variant('ai', list(size))
+        Gio.Settings.set_value(self.settings, 'window-size', size)
+
+
+    def load_settings(self):
+        size = Gio.Settings.get_value(self.settings, 'window-size')
+        self.set_default_size(size[0], size[1])
 
