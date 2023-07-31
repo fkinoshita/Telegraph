@@ -34,7 +34,7 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
         self.settings = Gio.Settings.new(Gio.Application.get_default().get_application_id())
 
-        # Set saved window size
+        #Set saved window size
         size = Gio.Settings.get_value(self.settings, 'window-size')
         self.set_default_size(size[0], size[1])
 
@@ -57,7 +57,7 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
 
     def do_size_allocate(self, width, height, baseline):
-        # Save window size
+        #Save window size
         size = [width, height]
         size = GLib.Variant('ai', list(size))
         Gio.Settings.set_value(self.settings, 'window-size', size)

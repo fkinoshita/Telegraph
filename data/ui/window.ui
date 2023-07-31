@@ -54,47 +54,56 @@
                         <property name="orientation">vertical</property>
 
                         <style>
-                          <class name="card"/>
                           <class name="text-box"/>
                         </style>
 
                         <child>
-                          <object class="GtkOverlay">
-                            <property name="child">
-                              <object class="GtkScrolledWindow">
-                                <property name="hexpand">true</property>
-                                <property name="vexpand">true</property>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="overflow">hidden</property>
 
-                                <style>
-                                  <class name="scrolled-window"/>
-                                </style>
+                            <style>
+                              <class name="card"/>
+                              <class name="side-box"/>
+                            </style>
 
-                                <child>
-                                  <object class="GtkTextView" id="message_text_view">
-                                    <property name="wrap-mode">GTK_WRAP_WORD_CHAR</property>
-                                    <property name="top-margin">12</property>
-                                    <property name="bottom-margin">12</property>
-                                    <property name="left-margin">12</property>
-                                    <property name="right-margin">12</property>
+                            <child>
+                              <object class="GtkOverlay">
+                                <property name="child">
+                                  <object class="GtkScrolledWindow">
+                                    <property name="vexpand">true</property>
+
+                                    <child>
+                                      <object class="GtkTextView" id="message_text_view">
+                                        <property name="wrap-mode">GTK_WRAP_WORD_CHAR</property>
+                                        <property name="top-margin">9</property>
+                                        <property name="bottom-margin">9</property>
+                                        <property name="left-margin">9</property>
+                                        <property name="right-margin">9</property>
+                                      </object>
+                                    </child>
+
+                                    <style>
+                                      <class name="scrolled"/>
+                                    </style>
+
+                                  </object>
+                                </property>
+
+                                <child type="overlay">
+                                  <object class="GtkButton" id="message_copy_button">
+                                    <property name="icon-name">edit-copy-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Copy to Clipboard</property>
+                                    <property name="halign">end</property>
+                                    <property name="valign">end</property>
+                                    <property name="margin-bottom">12</property>
+                                    <property name="margin-end">12</property>
+
+                                    <style>
+                                      <class name="circular"/>
+                                    </style>
                                   </object>
                                 </child>
-
-                              </object>
-                            </property>
-
-                            <child type="overlay">
-                              <object class="GtkButton" id="message_copy_button">
-                                <property name="sensitive">false</property>
-                                <property name="icon-name">edit-copy-symbolic</property>
-                                <property name="tooltip-text" translatable="yes">Copy to Clipboard</property>
-                                <property name="halign">end</property>
-                                <property name="valign">end</property>
-                                <property name="margin-bottom">6</property>
-                                <property name="margin-end">6</property>
-
-                                <style>
-                                  <class name="circular"/>
-                                </style>
 
                               </object>
                             </child>
@@ -110,56 +119,64 @@
 
                 <child>
                   <object class="AdwPreferencesGroup" id="morse_group">
-                    <property name="title" translatable="yes">Morse Code</property>
+                    <property name="title" translatable="yes">Morse</property>
 
                     <child>
                       <object class="GtkBox">
                         <property name="orientation">vertical</property>
 
                         <style>
-                          <class name="card"/>
                           <class name="text-box"/>
                         </style>
 
                         <child>
-                          <object class="GtkOverlay">
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="overflow">hidden</property>
 
-                            <property name="child">
+                            <style>
+                              <class name="card"/>
+                              <class name="side-box"/>
+                            </style>
 
-                              <object class="GtkScrolledWindow">
-                                <property name="hexpand">true</property>
-                                <property name="vexpand">true</property>
+                            <child>
+                              <object class="GtkOverlay">
+                                <property name="child">
+                                  <object class="GtkScrolledWindow">
+                                    <property name="vexpand">true</property>
 
-                                <style>
-                                  <class name="scrolled-window"/>
-                                </style>
+                                    <child>
+                                      <object class="GtkTextView" id="morse_text_view">
+                                        <property name="wrap-mode">GTK_WRAP_WORD_CHAR</property>
+                                        <property name="monospace">true</property>
+                                        <property name="top-margin">9</property>
+                                        <property name="bottom-margin">9</property>
+                                        <property name="left-margin">9</property>
+                                        <property name="right-margin">9</property>
+                                      </object>
+                                    </child>
 
-                                <child>
-                                  <object class="GtkTextView" id="morse_text_view">
-                                    <property name="wrap-mode">GTK_WRAP_CHAR</property>
-                                    <property name="monospace">true</property>
-                                    <property name="top-margin">12</property>
-                                    <property name="bottom-margin">12</property>
-                                    <property name="left-margin">12</property>
-                                    <property name="right-margin">12</property>
+                                    <style>
+                                      <class name="scrolled"/>
+                                    </style>
+
+                                  </object>
+                                </property>
+
+                                <child type="overlay">
+                                  <object class="GtkButton" id="morse_copy_button">
+                                    <property name="icon-name">edit-copy-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Copy to Clipboard</property>
+                                    <property name="halign">end</property>
+                                    <property name="valign">end</property>
+                                    <property name="margin-bottom">12</property>
+                                    <property name="margin-end">12</property>
+
+                                    <style>
+                                      <class name="circular"/>
+                                    </style>
                                   </object>
                                 </child>
-                              </object>
-                            </property>
-
-                            <child type="overlay">
-                              <object class="GtkButton" id="morse_copy_button">
-                                <property name="sensitive">false</property>
-                                <property name="icon-name">edit-copy-symbolic</property>
-                                <property name="tooltip-text" translatable="yes">Copy to Clipboard</property>
-                                <property name="halign">end</property>
-                                <property name="valign">end</property>
-                                <property name="margin-bottom">6</property>
-                                <property name="margin-end">6</property>
-
-                                <style>
-                                  <class name="circular"/>
-                                </style>
 
                               </object>
                             </child>
