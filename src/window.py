@@ -14,8 +14,6 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
     toast_overlay = Gtk.Template.Child()
 
-    window_box = Gtk.Template.Child()
-
     message_group = Gtk.Template.Child()
     morse_group = Gtk.Template.Child()
 
@@ -54,20 +52,6 @@ class TelegraphWindow(Adw.ApplicationWindow):
 
         self.message_text_view.get_buffer().set_text("SOS")
         self.message_text_view.grab_focus()
-
-
-    def do_size_allocate(self, width, height, baseline):
-        #Save window size
-        size = [width, height]
-        size = GLib.Variant('ai', list(size))
-        Gio.Settings.set_value(self.settings, 'window-size', size)
-
-        if width < 680:
-            self.window_box.props.orientation = Gtk.Orientation.VERTICAL
-        else:
-            self.window_box.props.orientation = Gtk.Orientation.HORIZONTAL
-
-        Adw.ApplicationWindow.do_size_allocate(self, width, height, baseline)
 
 
     def __on_input_changed(self, input_buffer):

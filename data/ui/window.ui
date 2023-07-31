@@ -9,18 +9,9 @@
       <object class="AdwToastOverlay" id="toast_overlay">
 
         <property name="child">
-          <object class="GtkBox">
-            <property name="orientation">vertical</property>
-            <property name="hexpand">true</property>
-            <property name="vexpand">true</property>
-
-            <child>
-              <object class="GtkHeaderBar">
-
-                <style>
-                  <class name="flat"/>
-                </style>
-
+          <object class="AdwToolbarView">
+            <child type="top">
+              <object class="AdwHeaderBar">
                 <child type="end">
                   <object class="GtkMenuButton">
                     <property name="primary">true</property>
@@ -29,12 +20,11 @@
                     <property name="tooltip-text" translatable="yes">Main Menu</property>
                   </object>
                 </child>
-
               </object>
             </child>
 
-            <child>
-              <object class="GtkBox" id="window_box">
+            <property name="content">
+              <object class="GtkBox" id="layout">
                 <property name="orientation">vertical</property>
                 <property name="hexpand">true</property>
                 <property name="vexpand">true</property>
@@ -191,13 +181,20 @@
                 </child>
 
               </object>
-            </child>
+            </property>
 
           </object>
         </property>
 
       </object>
     </property>
+
+    <child>
+      <object class="AdwBreakpoint">
+        <condition>min-width: 500px</condition>
+        <setter object="layout" property="orientation">horizontal</setter>
+      </object>
+    </child>
 
   </template>
 
