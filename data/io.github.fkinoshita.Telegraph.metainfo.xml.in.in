@@ -43,7 +43,7 @@
   <content_rating type="oars-1.1" />
   <releases>
     <release version="0.1.7" date="2023-06-17">
-      <description>
+      <description translatable="no">
         <p>This is minor release of Telegraph brings some improvements nicer looking:</p>
         <ul>
           <li>Remove margins from text views</li>
@@ -54,7 +54,7 @@
       </description>
     </release>
     <release version="0.1.6" date="2023-05-25">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Improve undershoot styles (daudix-UFO)</li>
           <li>Add Russian translations (daudix-UFO)</li>
@@ -63,7 +63,7 @@
       </description>
     </release>
     <release version="0.1.5" date="2023-04-24">
-      <description>
+      <description translatable="no">
         <p>This is the first release after Telegraph entered GNOME Circle!</p>
         <ul>
           <li>Start text views with the "SOS" text, this makes it easier to understand that users should edit the text views.</li>
@@ -73,7 +73,7 @@
       </description>
     </release>
     <release version="0.1.4" date="2023-04-07">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Remember and restore window size</li>
           <li>Add Italian translations (albanobattistella)</li>
@@ -81,7 +81,7 @@
       </description>
     </release>
     <release version="0.1.3" date="2023-04-01">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Ctrl+W now closes the window</li>
           <li>Add French translations (Amerey)</li>
@@ -90,7 +90,7 @@
       </description>
     </release>
     <release version="0.1.2" date="2023-03-31">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Small user interface improvements</li>
           <li>Use nicer colors for GNOME Software carousel tile</li>
@@ -99,7 +99,7 @@
       </description>
     </release>
     <release version="0.1.1" date="2023-03-29">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Remove explicit modes, you can now start typing on either text views (axtloss)</li>
           <li>Layout is now responsive (gregorni)</li>
@@ -109,7 +109,7 @@
       </description>
     </release>
     <release version="0.1.0" date="2023-03-24">
-      <description>
+      <description translatable="no">
         <p>First release of Telegraph</p>
       </description>
     </release>
