@@ -26,6 +26,8 @@
   </recommends>
   <url type="homepage">https://github.com/fkinoshita/Telegraph</url>
   <url type="bugtracker">https://github.com/fkinoshita/Telegraph/issues</url>
+  <url type="vcs-browser">https://github.com/fkinoshita/Telegraph/</url>
+  <url type="translate">https://github.com/fkinoshita/Telegraph/tree/main/po</url>
   <url type="donation">https://ko-fi.com/fkinoshita</url>
   <screenshots>
     <screenshot type="default">
