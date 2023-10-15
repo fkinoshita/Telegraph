@@ -1,8 +1,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 import re
-from gettext import gettext as _
-
 from gi.repository import Adw, Gtk, Gdk, Gio, GLib
 
 from .const import PROFILE
