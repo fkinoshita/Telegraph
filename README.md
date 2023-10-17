@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://apps.gnome.org/app/io.github.fkinoshita.Telegraph">
+  <a href="https://apps.gnome.org/Telegraph/">
     <img src="https://circle.gnome.org/assets/button/badge.svg" alt="GNOME Circle"/>
   </a>
   <a href="https://flathub.org/apps/details/io.github.fkinoshita.Telegraph">
