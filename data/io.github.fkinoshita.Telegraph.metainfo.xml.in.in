@@ -122,8 +122,6 @@
     <kudo>ModernToolkit</kudo>
   </kudos>
   <custom>
-    <value key="Purism::form_factor">workstation</value>
-    <value key="Purism::form_factor">mobile</value>
     <value key="GnomeSoftware::key-colors">[(76, 113, 160), (100, 149, 211)]</value>
   </custom>
 </component>
