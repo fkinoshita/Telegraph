@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-15 13:57+0300\n"
+"PO-Revision-Date: 2023-11-07 16:09+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4\n"
+
+#: data/about_dialog.ui.in:6
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:11
+msgid "Write and decode morse"
+msgstr "Напісанне і расшыфроўка Морзэ"
+
+#. Add your name to the translator credits list
+#: data/about_dialog.ui.in:10
+msgid "translator-credits"
+msgstr "Yahor Haurylenka <k1llo2810@gmail.com> 2023"
+
+#: data/about_dialog.ui.in:13
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:4 data/ui/window.ui:4
+msgid "Telegraph"
+msgstr "Тэлеграф"
+
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:5
+msgid "A Morse translator for GNOME"
+msgstr "Перакладчык Морзэ для GNOME"
+
+#: data/io.github.fkinoshita.Telegraph.desktop.in.in:13
+msgid "morse;code;translator;translate;"
+msgstr "morse;code;translator;translate;марзе;код;перакладчык;перакласці;"
+
+#: data/io.github.fkinoshita.Telegraph.gschema.xml.in:6
+msgid "Window Size"
+msgstr "Памер акна"
+
+#: data/io.github.fkinoshita.Telegraph.gschema.xml.in:7
+msgid "Remember the window size"
+msgstr "Запомніць памер акна"
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:14
+msgid ""
+"Telegraph is a simple Morse translator, start typing your message to see the "
+"resulting Morse code and vice versa."
+msgstr ""
+"Тэлеграф - гэта просты перакладчык Морзэ, пачніце пісаць паведамленне, каб "
+"адразу убачыць атрыманы код Морзэ і наадварот."
+
+#: data/io.github.fkinoshita.Telegraph.metainfo.xml.in.in:37
+msgid "Main window"
+msgstr "Галоўнае акно"
+
+#: data/ui/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Агульныя"
+
+#: data/ui/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Паказаць спалучэнні клавіш"
+
+#: data/ui/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Закрыць"
+
+#: data/ui/window.ui:20
+msgid "Main Menu"
+msgstr "Галоўнае меню"
+
+#: data/ui/window.ui:40
+msgid "Message"
+msgstr "Паведамленне"
+
+#: data/ui/window.ui:86 data/ui/window.ui:159
+msgid "Copy to Clipboard"
+msgstr "Скапіраваць у буфер абмену"
+
+#: data/ui/window.ui:112
+msgid "Morse"
+msgstr "Морзэ"
+
+#: data/ui/window.ui:205
+msgid "_Keyboard Shortcuts"
+msgstr "_Спалучэнні клавіш"
+
+#: data/ui/window.ui:210
+msgid "_About Telegraph"
+msgstr "_Пра Тэлеграф"
+
+#: src/window.py:106
+msgid "Message copied"
+msgstr "Паведамленне скапіравана"
+
+#: src/window.py:111
+msgid "Morse code copied"
+msgstr "Код Морзэ скапіраваны"
