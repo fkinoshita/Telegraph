@@ -63,13 +63,13 @@ class TelegraphApplication(Adw.Application):
         about_dialog.set_transient_for(self.props.active_window)
 
         about_dialog.set_release_notes(
-        """<p>This is minor release of Telegraph makes it nicer looking:</p>
+        """<p>This release makes Telegraph inline with other GNOME 45 apps</p>
            <ul>
-             <li>Remove margins from text views</li>
-             <li>Overlay copy buttons on top of text views, making room for more text</li>
+             <li>Use of the newer widgets, making Telegraph more consistent with other apps</li>
+             <li>Updated metadata</li>
+             <li>Updated translations</li>
            </ul>
-           <p>Telegraph is made possible by volunteer developers, designers, and translators. Thank you for your contributions!</p>
-           <p>Feel free to report issues and ask for new features.</p>
+           <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
         """)
 
         about_dialog.present()
