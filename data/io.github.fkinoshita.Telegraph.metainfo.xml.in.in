@@ -44,6 +44,17 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="0.1.8" date="2023-11-06">
+      <description translatable="no">
+        <p>This release makes Telegraph inline with other GNOME 45 apps</p>
+        <ul>
+          <li>Use of the newer widgets, making Telegraph more consistent with other apps</li>
+          <li>Updated metadata</li>
+          <li>Updated translations</li>
+        </ul>
+        <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
+      </description>
+    </release>
     <release version="0.1.7" date="2023-06-17">
       <description translatable="no">
         <p>This is minor release of Telegraph brings some improvements nicer looking:</p>
